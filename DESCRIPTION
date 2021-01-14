@@ -6,6 +6,17 @@ Author: Tom Cardoso
 Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
 Description: This package contains the core functions powering
     The Globe and Mail's R data journalism template, startr.
+Depends: R (>= 3.5.1)
 License: MIT
 Encoding: UTF-8
 LazyData: true
+Imports:
+    here
+    librarian
+    tidyverse
+    feather
+    openxlsx
+    knitr
+    beepr
+    ggthemes
+    clipr
