@@ -1,0 +1,11 @@
+Package: upstartr
+Type: Package
+Title: Utilities Powering Core Startr Functionality
+Version: 0.1.0
+Author: Tom Cardoso
+Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
+Description: This package contains the core functions powering
+    The Globe and Mail's R data journalism template, startr.
+License: MIT
+Encoding: UTF-8
+LazyData: true
