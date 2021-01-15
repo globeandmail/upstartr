@@ -154,7 +154,7 @@ combine_excels <- function(dir, pattern = '*.xls[x]?', all_sheets = FALSE, ...) 
 #' @param m Numeric vector to index to first value.
 #' @param base Base to index against. (Default: 0)
 #'
-#' @return The mode of that vector.
+#' @return An indexed version of the vector.
 #'
 #' @export
 index <- function(m, base = 0) {
@@ -177,7 +177,8 @@ index <- function(m, base = 0) {
 #' @export
 mode <- function(x) {
   ux <- unique(x)
-  ux[which.max(tabulate(match(x, ux)))]
+  tab <- tabulate(match(x, ux))
+  ux[tab == max(tab)]
 }
 
 #' De-accents strings

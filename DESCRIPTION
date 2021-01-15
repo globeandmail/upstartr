@@ -23,8 +23,11 @@ Imports:
     ggthemes,
     tidytext
 Suggests:
-    sf
+    sf,
+    testthat (>= 3.0.0),
+    withr
 Language: en-US
 URL: https://github.com/globeandmail/upstartr
 BugReports: https://github.com/globeandmail/upstartr/issues
 RoxygenNote: 7.1.1
+Config/testthat/edition: 3
