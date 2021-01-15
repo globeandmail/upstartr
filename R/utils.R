@@ -13,7 +13,8 @@
 #'   from the environment after processing is complete. (Default: TRUE)
 #' @param should_beep Whether startr should beep after tasks like processing or knitting RMarkdown notebooks. (Default: TRUE)
 #' @param set_minimal_graphics_theme Whether the minimal graphics theme should be used. (Default: TRUE)
-#' @param packages Vector of package names, either from CRAN or from Github, to be installed.
+#' @param packages Vector of package names, from CRAN, Github or Bioconductor to be installed.
+#'   If using GitHub, package names should be in the format 'globeandmail/upstartr'.
 #'
 #' @export
 initialize_startr <- function(
@@ -52,9 +53,7 @@ initialize_startr <- function(
       )
     }
 
-    # Install packages here, either using a custom function or using a library that can handle GH packages
-    # librarian::shelf(rlang::syms(packages))
-    # load_requirements(packages)
+    librarian::shelf(packages, lib = NULL)
 
     if (set_minimal_graphics_theme) {
       ggthemes::theme_set(theme_minimal())

@@ -34,7 +34,8 @@ from the environment after processing is complete. (Default: TRUE)}
 
 \item{set_minimal_graphics_theme}{Whether the minimal graphics theme should be used. (Default: TRUE)}
 
-\item{packages}{Vector of package names, either from CRAN or from Github, to be installed.}
+\item{packages}{Vector of package names, from CRAN, Github or Bioconductor to be installed.
+If using GitHub, package names should be in the format 'globeandmail/upstartr'.}
 }
 \description{
 Used to initialize a startr template for analysis. Will enforce some startr-required
