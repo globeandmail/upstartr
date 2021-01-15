@@ -6,6 +6,9 @@
 \usage{
 not.null(x)
 }
+\arguments{
+\item{x}{A vector to check for NULLs against.}
+}
 \description{
 Given a vector, returns TRUE for all entities that aren't NULL.
 }

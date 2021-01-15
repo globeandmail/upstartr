@@ -62,7 +62,7 @@ write_plot <- function(variable, output_dir = dir_plots(), ...) {
 #' @param ... Other settings to pass to st_write, such as format, width, height or dpi.
 #'
 #' @export
-write_shp <- function(shp, path) {
+write_shp <- function(shp, path, ...) {
   if (file.exists(path)) {
     file.remove(path)
   }

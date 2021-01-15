@@ -70,7 +70,7 @@ remove_non_utf8 <- function(x) {
   iconv(x, final_enc, to = 'UTF-8', sub = '')
 }
 
-#' Opposite of %in%
+#' Opposite of `%in%`
 #'
 #' Given vectors A and B, returns only the entities from vector A that don't occur in vector B.
 #'
@@ -81,12 +81,16 @@ remove_non_utf8 <- function(x) {
 #'
 #' Given a vector, returns TRUE for all entities that aren't NA.
 #'
+#' @param x A vector to check for NAs against.
+#'
 #' @export
 not.na <- purrr::negate(is.na)
 
 #' Opposite of is.null
 #'
 #' Given a vector, returns TRUE for all entities that aren't NULL.
+#'
+#' @param x A vector to check for NULLs against.
 #'
 #' @export
 not.null <- purrr::negate(is.null)

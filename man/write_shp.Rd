@@ -4,7 +4,7 @@
 \alias{write_shp}
 \title{Write a shapefile to disk}
 \usage{
-write_shp(shp, path)
+write_shp(shp, path, ...)
 }
 \arguments{
 \item{shp}{A spatial object.}

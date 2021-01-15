@@ -6,6 +6,9 @@
 \usage{
 not.na(x)
 }
+\arguments{
+\item{x}{A vector to check for NAs against.}
+}
 \description{
 Given a vector, returns TRUE for all entities that aren't NA.
 }
