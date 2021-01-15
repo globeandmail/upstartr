@@ -28,6 +28,11 @@ library(upstartr)
 You can find the full reference manual for `upstartr`'s functions [**here**](https://cran.r-project.org/web/packages/upstartr/upstartr.pdf).
 
 
+### Credits
+
+Spark plug illustration by Murat Yükselir.
+
+
 ### Get in touch
 
 If you've got any questions, feel free to send us an email, or give us a shout on Twitter:
