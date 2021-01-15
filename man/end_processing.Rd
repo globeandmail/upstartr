@@ -4,12 +4,18 @@
 \alias{end_processing}
 \title{Runs the post-processing step on a startr project.}
 \usage{
-end_processing(should_clean_processing_variables = TRUE, should_beep = TRUE)
+end_processing(
+  should_clean_processing_variables = TRUE,
+  should_beep = TRUE,
+  logged_vars = NULL
+)
 }
 \arguments{
 \item{should_clean_processing_variables}{Either TRUE, FALSE, or pulled from the environment if set.}
 
 \item{should_beep}{Either TRUE, FALSE, or pulled from the environment if set.}
+
+\item{logged_vars}{A list of variables that existed before the processing step began.}
 }
 \description{
 The post-processing step, run as part of \code{upstartr::\link[upstartr:run_process]{run_process}}

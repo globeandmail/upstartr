@@ -43,7 +43,9 @@ and optionally removing stop words. Useful in cases where you have two large vec
 or business names you need to compare, but where misspellings may be common.
 }
 \examples{
-simplify_string(c('J. Jonah Jameson', 'j jonah jameson', 'j   jonah 123   jameson', 'J Jónah Jameson...'))
-simplify_string(c('123 Business Inc.', '123 business incorporated', '123 ... Business ... Inc.'), digits = TRUE, stopwords = c('INC', 'INCORPORATED'))
+simplify_string(c('J. Jonah Jameson', 'j jonah jameson',
+  'j   jonah 123   jameson', 'J Jónah Jameson...'))
+simplify_string(c('123 Business Inc.', '123 business incorporated',
+  '123 ... Business ... Inc.'), digits = TRUE, stopwords = c('INC', 'INCORPORATED'))
 
 }

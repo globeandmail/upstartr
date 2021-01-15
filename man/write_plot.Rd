@@ -14,6 +14,6 @@ write_plot(variable, output_dir = dir_plots(), ...)
 \item{...}{Other settings to pass to ggsave, such as format, width, height or dpi.}
 }
 \description{
-Takes a \code{ggplot2} object and writes it to disk via \code{ggplot::\link[ggplot:ggsave]{ggsave}} using the
+Takes a \code{ggplot2} object and writes it to disk via \code{ggplot2::\link[ggplot2:ggsave]{ggsave}} using the
 variable name as the filename.
 }

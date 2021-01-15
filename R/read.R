@@ -13,7 +13,7 @@
 combine_csvs <- function(dir, pattern = '*.csv', ...) {
   list.files(dir, pattern = pattern, full.names = TRUE) %>%
     purrr::set_names() %>%
-    map_dfr(function(x) {
+    purrr::map_dfr(function(x) {
       readr::read_csv(file = x, ...)
     }, .id = 'filename')
 }

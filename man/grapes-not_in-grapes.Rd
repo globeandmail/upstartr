@@ -2,9 +2,14 @@
 % Please edit documentation in R/utils.R
 \name{\%not_in\%}
 \alias{\%not_in\%}
-\title{Opposite of `%in%`}
+\title{Opposite of \%in\%}
 \usage{
 x \%not_in\% table
+}
+\arguments{
+\item{x}{The vector you want to check.}
+
+\item{table}{Table in which to do lookups against x.}
 }
 \description{
 Given vectors A and B, returns only the entities from vector A that don't occur in vector B.

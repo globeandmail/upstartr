@@ -56,7 +56,7 @@ initialize_startr <- function(
     librarian::shelf(packages, lib = NULL)
 
     if (set_minimal_graphics_theme) {
-      ggthemes::theme_set(theme_minimal())
+      ggplot2::theme_set(ggplot2::theme_minimal())
     }
 
     knitr::opts_chunk$set(

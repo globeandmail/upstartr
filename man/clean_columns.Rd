@@ -17,6 +17,7 @@ Zero-configuration function that takes unwieldy column names and
 coerces them into tidyverse-styled column names.
 }
 \examples{
-clean_columns(c("Date of Purchase", "Item No.", "description", "", "Transaction at Jane's Counter?", "Auditing - Worth it?"))
+clean_columns(c("Date of Purchase", "Item No.", "description", "",
+  "Transaction at Jane's Counter?", "Auditing - Worth it?"))
 
 }

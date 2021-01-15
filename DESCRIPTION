@@ -10,32 +10,24 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
-    R (>= 3.5.0),
-    ggplot2,
-    dplyr,
-    tidyr,
-    readr,
-    purrr,
-    tibble,
-    stringr,
-    forcats,
-    lubridate,
-    hms,
-    magrittr,
-    glue,
-    readxl,
-    rvest,
-    httr,
-    feather,
-    clipr
+    R (>= 3.5.0)
 Imports:
     here,
+    stringr,
+    readxl,
+    magrittr,
+    readr,
+    purrr,
+    ggplot2,
+    glue,
+    dplyr,
     librarian,
     openxlsx,
     knitr,
     beepr,
-    ggthemes,
-    tidytext
+    tidytext,
+    scales,
+    rmarkdown
 Suggests:
     sf,
     testthat (>= 3.0.0),

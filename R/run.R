@@ -25,9 +25,9 @@ run_process <- function(should_process_data = TRUE) {
   }
 
   if (should_process_data) {
-    begin_processing()
+    logged_vars <- begin_processing()
     source(dir_src('process.R'))
-    end_processing()
+    end_processing(logged_vars)
   }
 }
 
@@ -48,9 +48,13 @@ begin_processing <- function(should_clean_processing_variables = TRUE) {
     should_clean_processing_variables <- clean_processing_variables_param
   }
 
+  logged_vars <- NULL
+
   if (should_clean_processing_variables) {
-    assign('curr_env', ls(.GlobalEnv), envir = .GlobalEnv)
+    logged_vars <- ls(.GlobalEnv)
   }
+
+  return(logged_vars)
 }
 
 #' Runs the post-processing step on a startr project.
@@ -62,9 +66,10 @@ begin_processing <- function(should_clean_processing_variables = TRUE) {
 #'
 #' @param should_clean_processing_variables Either TRUE, FALSE, or pulled from the environment if set.
 #' @param should_beep Either TRUE, FALSE, or pulled from the environment if set.
+#' @param logged_vars A list of variables that existed before the processing step began.
 #'
 #' @export
-end_processing <- function(should_clean_processing_variables = TRUE, should_beep = TRUE) {
+end_processing <- function(should_clean_processing_variables = TRUE, should_beep = TRUE, logged_vars = NULL) {
   clean_processing_variables_param <- getOption('startr.should_clean_processing_variables')
   beep_param <- getOption('startr.should_beep')
 
@@ -76,11 +81,13 @@ end_processing <- function(should_clean_processing_variables = TRUE, should_beep
     should_beep <- beep_param
   }
 
-  if (should_clean_processing_variables) {
-    ls(.GlobalEnv) %>%
-      setdiff(., curr_env) %>%
-      as.character() %>%
-      rm(list = ., envir = .GlobalEnv)
+  if (should_clean_processing_variables & not.null(logged_vars)) {
+
+    processing_specific_vars <- ls(.GlobalEnv) %>%
+      setdiff(logged_vars) %>%
+      as.character()
+
+    rm(list = processing_specific_vars, envir = .GlobalEnv)
   }
   if (should_beep) beepr::beep()
 }

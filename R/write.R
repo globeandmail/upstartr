@@ -27,7 +27,7 @@ write_excel <- function(variable, output_dir = dir_data_out(), should_timestamp_
 
 #' Write out a ggplot2 graphic with minimal configuration
 #'
-#' Takes a \code{ggplot2} object and writes it to disk via \code{ggplot::\link[ggplot:ggsave]{ggsave}} using the
+#' Takes a \code{ggplot2} object and writes it to disk via \code{ggplot2::\link[ggplot2:ggsave]{ggsave}} using the
 #' variable name as the filename.
 #'
 #' @param variable A tibble or dataframe object.

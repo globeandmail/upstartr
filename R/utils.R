@@ -1,3 +1,6 @@
+#' @importFrom magrittr %>%
+NULL
+
 #' Index values
 #'
 #' Index numeric vector to first value. By default, the index base will be 0,
@@ -48,7 +51,7 @@ mode <- function(x) {
 unaccent <- function(x) {
   enc <- Encoding(x)
   final_enc <- 'UTF-8'
-  if (all(enc == first(enc))) final_enc <- first(enc)
+  if (all(enc == dplyr::first(enc))) final_enc <- dplyr::first(enc)
   if (any(enc == 'unknown')) final_enc <- 'UTF-8'
   iconv(x, final_enc, to = 'ASCII//TRANSLIT')
 }
@@ -65,14 +68,16 @@ unaccent <- function(x) {
 remove_non_utf8 <- function(x) {
   enc <- Encoding(x)
   final_enc <- 'UTF-8'
-  if (all(enc == first(enc))) final_enc <- first(enc)
+  if (all(enc == dplyr::first(enc))) final_enc <- dplyr::first(enc)
   if (any(enc == 'unknown')) final_enc <- 'UTF-8'
   iconv(x, final_enc, to = 'UTF-8', sub = '')
 }
 
-#' Opposite of `%in%`
+#' Opposite of \%in\%
 #'
 #' Given vectors A and B, returns only the entities from vector A that don't occur in vector B.
+#' @param x The vector you want to check.
+#' @param table Table in which to do lookups against x.
 #'
 #' @export
 `%not_in%` <- purrr::negate(`%in%`)
@@ -114,8 +119,10 @@ not.null <- purrr::negate(is.null)
 #'
 #' @return A character vector of simplified strings.
 #'
-#' @examples simplify_string(c('J. Jonah Jameson', 'j jonah jameson', 'j   jonah 123   jameson', 'J Jónah Jameson...'))
-#' @examples simplify_string(c('123 Business Inc.', '123 business incorporated', '123 ... Business ... Inc.'), digits = TRUE, stopwords = c('INC', 'INCORPORATED'))
+#' @examples simplify_string(c('J. Jonah Jameson', 'j jonah jameson',
+#'   'j   jonah 123   jameson', 'J Jónah Jameson...'))
+#' @examples simplify_string(c('123 Business Inc.', '123 business incorporated',
+#'   '123 ... Business ... Inc.'), digits = TRUE, stopwords = c('INC', 'INCORPORATED'))
 #'
 #' @export
 simplify_string <- function(
@@ -184,13 +191,14 @@ determine_casing_fn <- function(case) {
 #'
 #' @return A character vector of column names.
 #'
-#' @examples clean_columns(c("Date of Purchase", "Item No.", "description", "", "Transaction at Jane's Counter?", "Auditing - Worth it?"))
+#' @examples clean_columns(c("Date of Purchase", "Item No.", "description", "",
+#'   "Transaction at Jane's Counter?", "Auditing - Worth it?"))
 #'
 #' @export
 clean_columns <- function(x) {
   cols <- x %>%
     simplify_string(digits = TRUE, case = 'lower') %>%
-    stringr::str_replace_all(., '[\\s]+', '_')
+    stringr::str_replace_all('[\\s]+', '_')
 
   for (i in 1:length(cols)) {
     if (!as.logical(stringr::str_count(cols[i]))) {
@@ -226,8 +234,8 @@ convert_str_to_logical <- function(x, truthy = c('T', 'TRUE', 'Y', 'YES'), falsy
   f_regex <- paste0('\\b', paste(falsy_vals, collapse = '\\b|\\b'), '\\b')
 
   x %>%
-    simplify_string(.) %>%
-    stringr::str_replace_all(., t_regex, 'TRUE') %>%
-    stringr::str_replace_all(., f_regex, 'FALSE') %>%
-    as.logical(.)
+    simplify_string() %>%
+    stringr::str_replace_all(t_regex, 'TRUE') %>%
+    stringr::str_replace_all(f_regex, 'FALSE') %>%
+    as.logical()
 }
