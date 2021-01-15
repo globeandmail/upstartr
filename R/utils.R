@@ -241,8 +241,8 @@ not.na <- purrr::negate(is.na)
 #'
 #' @return A character vector of simplified strings.
 #'
-#' @example simplify_string(c('J. Jonah Jameson', 'j jonah jameson', 'j   jonah 123   jameson', 'J Jónah Jameson...'))
-#' @example simplify_string(c('123 Business Inc.', '123 business incorporated', '123 ... Business ... Inc.), digits = TRUE, stopwords = c('INC', 'INCORPORATED'))
+#' @examples simplify_string(c('J. Jonah Jameson', 'j jonah jameson', 'j   jonah 123   jameson', 'J Jónah Jameson...'))
+#' @examples simplify_string(c('123 Business Inc.', '123 business incorporated', '123 ... Business ... Inc.'), digits = TRUE, stopwords = c('INC', 'INCORPORATED'))
 #'
 #' @export
 simplify_string <- function(
@@ -300,7 +300,7 @@ simplify_string <- function(
 #'
 #' @return A character vector of column names.
 #'
-#' @example clean_columns(c("Date of Purchase", "Item No.", "description", "", "Transaction at Jane's Counter?", "Auditing - Worth it?"))
+#' @examples clean_columns(c("Date of Purchase", "Item No.", "description", "", "Transaction at Jane's Counter?", "Auditing - Worth it?"))
 #'
 #' @export
 clean_columns <- function(x) {
@@ -335,7 +335,7 @@ clean_columns <- function(x) {
 #'
 #' @return A logical vector.
 #'
-#' @example convert_str_to_logical(c('YES', 'Y', 'No', 'N', 'YES', 'yes', 'no', 'Yes', 'NO', 'Y', 'y'))
+#' @examples convert_str_to_logical(c('YES', 'Y', 'No', 'N', 'YES', 'yes', 'no', 'Yes', 'NO', 'Y', 'y'))
 #'
 #' @export
 convert_str_to_logical <- function(x, truthy = 'T|TRUE|Y|YES', falsy = 'F|FALSE|N|NO') {

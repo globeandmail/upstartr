@@ -44,7 +44,7 @@ write_plot <- function(variable, output_dir = dir_plots(), ...) {
     args[['format']] <- 'png'
   }
 
-  args[['file']] <- here::here(output_dir, glue::glue("{filename}.{args[['format']]}")),
+  args[['file']] <- here::here(output_dir, glue::glue("{filename}.{args[['format']]}"))
 
   if (args[['format']] == 'pdf') args[['useDingbats']] <- FALSE
 
