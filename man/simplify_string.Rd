@@ -10,7 +10,7 @@ simplify_string(
   digits = FALSE,
   unaccent = TRUE,
   utf8_only = TRUE,
-  uppercase = TRUE,
+  case = "upper",
   trim = TRUE,
   stopwords = NA
 )
@@ -26,7 +26,8 @@ simplify_string(
 
 \item{utf8_only}{Should characters be UTF-8 only? (Default: TRUE)}
 
-\item{uppercase}{Should characters be uppercased? (Default: TRUE)}
+\item{case}{What casing should characters use? Can be one of 'upper', 'lower', 'sentence', 'title',
+or 'keep' for the existing casing (Default: 'upper')}
 
 \item{trim}{Should strings be trimmed of excess spaces? (Default: TRUE)}
 

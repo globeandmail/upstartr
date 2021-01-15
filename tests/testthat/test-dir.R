@@ -1,12 +1,5 @@
-# TODO: set base path to something sensical
-# test_that('dir_path resolves correctly', {
-#   expect_equal(dir_path(), '???')
-#   expect_equal(dir_path('hello'), '???')
-#   expect_equal(dir_path('hello', 'world'), '???')
-# })
-
-# To test
-#
+# TODO
+# Write tests for:
 # dir_path
 # dir_src
 # dir_data_raw

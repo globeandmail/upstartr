@@ -12,7 +12,7 @@ index(m, base = 0)
 \item{base}{Base to index against. (Default: 0)}
 }
 \value{
-The mode of that vector.
+An indexed version of the vector.
 }
 \description{
 Index numeric vector to first value. By default, the index base will be 0,

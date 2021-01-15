@@ -4,21 +4,25 @@
 \alias{convert_str_to_logical}
 \title{Converts a character vector to logicals}
 \usage{
-convert_str_to_logical(x, truthy = "T|TRUE|Y|YES", falsy = "F|FALSE|N|NO")
+convert_str_to_logical(
+  x,
+  truthy = c("T", "TRUE", "Y", "YES"),
+  falsy = c("F", "FALSE", "N", "NO")
+)
 }
 \arguments{
 \item{x}{A character vector.}
 
-\item{truthy}{A pattern of case-insensitive truthy values to turn into TRUE.}
+\item{truthy}{A vector of case-insensitive truthy values to turn into TRUE.}
 
-\item{falsy}{A pattern of case-insensitive falsy values to turn into FALSE.}
+\item{falsy}{A vector of case-insensitive falsy values to turn into FALSE.}
 }
 \value{
 A logical vector.
 }
 \description{
 Takes a character vector and converts it to logicals, optionally using
-a pattern to match against for truthy and falsy values.
+a vector of patterns to match against for truthy and falsy values.
 }
 \examples{
 convert_str_to_logical(c('YES', 'Y', 'No', 'N', 'YES', 'yes', 'no', 'Yes', 'NO', 'Y', 'y'))
