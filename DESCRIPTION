@@ -1,22 +1,30 @@
 Package: upstartr
 Type: Package
-Title: Utilities Powering Core Startr Functionality
+Title: Utilities Powering Startr Data Journalism Template
 Version: 0.1.0
-Author: Tom Cardoso
+Authors@R: c(
+    person("Tom", "Cardoso", email = "tcardoso@globeandmail.com", role = c("aut", "cre"), comment = "creator and maintainer"))
 Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
-Description: This package contains the core functions powering
-    The Globe and Mail's R data journalism template, startr.
-Depends: R (>= 3.5.1)
-License: MIT
+Description: This package contains the core functions powering The Globe and Mail's R data journalism template, startr.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
-    here
-    librarian
-    tidyverse
-    feather
-    openxlsx
-    knitr
-    beepr
-    ggthemes
+Depends:
+    R (>= 3.5.1),
+    tidyverse,
+    feather,
     clipr
+Imports:
+    here,
+    librarian,
+    openxlsx,
+    knitr,
+    beepr,
+    ggthemes,
+    tidytext
+Suggests:
+    sf
+Language: en-US
+URL: https://github.com/globeandmail/upstartr
+BugReports: https://github.com/globeandmail/upstartr/issues
+RoxygenNote: 7.1.1
