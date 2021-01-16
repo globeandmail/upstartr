@@ -29,8 +29,8 @@ initialize_startr <- function(
     packages = c()
   ) {
 
-    if (scipen) options(scipen = scipen)
-    if (timezone) Sys.setenv(TZ = timezone)
+    if (is.numeric(scipen)) options(scipen = scipen)
+    if (is.character(timezone)) Sys.setenv(TZ = timezone)
 
     options(
       startr.should_render_notebook = should_render_notebook,
