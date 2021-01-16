@@ -4,6 +4,8 @@
 #' standards for analysis (such as removing scientific notation, setting timezones, and
 #' writing some project configs to `options`).
 #'
+#' @param author Name and email of the startr project author
+#' @param title Title of the startr project
 #' @param scipen Which level of scientific precision to use. (Default: 999)
 #' @param timezone The timezone for analysis. (Default: 'America/Toronto')
 #' @param should_render_notebook Whether the RMarkdown notebook should berendered. (Default: FALSE)
@@ -18,6 +20,8 @@
 #'
 #' @export
 initialize_startr <- function(
+    author,
+    title,
     scipen = 999,
     timezone = 'America/Toronto',
     should_render_notebook = FALSE,
@@ -40,10 +44,10 @@ initialize_startr <- function(
       startr.should_beep = should_beep
     )
 
-    if ('cansim' %in% packages) {
-      options(cansim.cache_path = dir_data_cache())
-    }
+    if (!missing('author')) options(startr.author = author)
+    if (!missing('title')) options(startr.title = title)
 
+    if ('cansim' %in% packages) options(cansim.cache_path = dir_data_cache())
     if ('cancensus' %in% packages) {
       options(
         # CANCENSUS_API should be set in your home directory's
@@ -55,9 +59,7 @@ initialize_startr <- function(
 
     librarian::shelf(packages, lib = NULL)
 
-    if (set_minimal_graphics_theme) {
-      ggplot2::theme_set(ggplot2::theme_minimal())
-    }
+    if (set_minimal_graphics_theme) ggplot2::theme_set(ggplot2::theme_minimal())
 
     knitr::opts_chunk$set(
       eval = TRUE,
@@ -74,5 +76,7 @@ initialize_startr <- function(
       dpi = 150,
       root.dir = here::here()
     )
+
+    print(glue::glue('Your startr project has been initialized!'))
 
 }

@@ -5,6 +5,8 @@
 \title{Initialize startr project}
 \usage{
 initialize_startr(
+  author,
+  title,
   scipen = 999,
   timezone = "America/Toronto",
   should_render_notebook = FALSE,
@@ -17,6 +19,10 @@ initialize_startr(
 )
 }
 \arguments{
+\item{author}{Name and email of the startr project author}
+
+\item{title}{Title of the startr project}
+
 \item{scipen}{Which level of scientific precision to use. (Default: 999)}
 
 \item{timezone}{The timezone for analysis. (Default: 'America/Toronto')}
