@@ -3,3 +3,6 @@
 ^\.github$
 images
 images/*
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

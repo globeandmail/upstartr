@@ -7,18 +7,18 @@ test_that('index correctly uses other bases', {
   expect_equal(index(c(20, 40, 10), base = 100), c(100, 200, 50))
 })
 
-test_that('mode returns correct mode', {
-  expect_equal(mode(c(1, 1, 1, 2, 2, 3)), 1)
-  expect_equal(mode(c('Jane', 'John', 'Stewart', 'Jane', 'Tom')), 'Jane')
-  expect_equal(mode(c(TRUE, FALSE, TRUE)), TRUE)
-  expect_equal(mode(c(0.1, 0.1, 0.2)), 0.1)
+test_that('calc_mode returns correct mode', {
+  expect_equal(calc_mode(c(1, 1, 1, 2, 2, 3)), 1)
+  expect_equal(calc_mode(c('Jane', 'John', 'Stewart', 'Jane', 'Tom')), 'Jane')
+  expect_equal(calc_mode(c(TRUE, FALSE, TRUE)), TRUE)
+  expect_equal(calc_mode(c(0.1, 0.1, 0.2)), 0.1)
 })
 
-test_that('mode returns multiple modes if there are ties', {
-  expect_equal(mode(c(1, 1, 1, 2, 2, 2, 3)), c(1, 2))
-  expect_equal(mode(c(1, 2)), c(1, 2))
-  expect_equal(mode(c('Tom', 'Jane')), c('Tom', 'Jane'))
-  expect_equal(mode(c(TRUE, FALSE)), c(TRUE, FALSE))
+test_that('calc_mode returns multiple modes if there are ties', {
+  expect_equal(calc_mode(c(1, 1, 1, 2, 2, 2, 3)), c(1, 2))
+  expect_equal(calc_mode(c(1, 2)), c(1, 2))
+  expect_equal(calc_mode(c('Tom', 'Jane')), c('Tom', 'Jane'))
+  expect_equal(calc_mode(c(TRUE, FALSE)), c(TRUE, FALSE))
 })
 
 non_utf8 <- 'fa\xE7ile'
