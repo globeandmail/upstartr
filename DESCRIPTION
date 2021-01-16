@@ -4,7 +4,7 @@ Title: Utilities Powering Startr Data Journalism Template
 Version: 0.1.0
 Authors@R: c(person("Tom", "Cardoso", email = "tcardoso@globeandmail.com", role = c("aut", "cre"), comment = "creator and maintainer"))
 Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
-Description: This package contains the core functions powering The Globe and Mail's R data journalism template, startr.
+Description: Core functions powering The Globe and Mail's R data journalism template, startr, along with utilities for day-to-day data journalism tasks.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
