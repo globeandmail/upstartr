@@ -20,14 +20,14 @@ run_config <- function() {
 run_process <- function(should_process_data = TRUE) {
   should_process_data_param <- getOption('startr.should_process_data')
 
-  if (!is.null(should_process_data_param)) {
+  if (not.null(should_process_data_param)) {
     should_process_data <- should_process_data_param
   }
 
   if (should_process_data) {
     logged_vars <- begin_processing()
     source(dir_src('process.R'))
-    end_processing(logged_vars)
+    end_processing(logged_vars = logged_vars)
   }
 }
 
@@ -44,7 +44,7 @@ run_process <- function(should_process_data = TRUE) {
 begin_processing <- function(should_clean_processing_variables = TRUE) {
   clean_processing_variables_param <- getOption('startr.should_clean_processing_variables')
 
-  if (!is.null(clean_processing_variables_param)) {
+  if (not.null(clean_processing_variables_param)) {
     should_clean_processing_variables <- clean_processing_variables_param
   }
 
@@ -73,11 +73,11 @@ end_processing <- function(should_clean_processing_variables = TRUE, should_beep
   clean_processing_variables_param <- getOption('startr.should_clean_processing_variables')
   beep_param <- getOption('startr.should_beep')
 
-  if (!is.null(clean_processing_variables_param)) {
+  if (not.null(clean_processing_variables_param)) {
     should_clean_processing_variables <- clean_processing_variables_param
   }
 
-  if (!is.null(beep_param)) {
+  if (not.null(beep_param)) {
     should_beep <- beep_param
   }
 
@@ -124,11 +124,11 @@ run_render_notebook <- function(filename = 'notebook.Rmd', should_beep = TRUE, s
   render_notebook_param <- getOption('startr.should_render_notebook')
   beep_param <- getOption('startr.should_beep')
 
-  if (!is.null(render_notebook_param)) {
+  if (not.null(render_notebook_param)) {
     should_render_notebook <- render_notebook_param
   }
 
-  if (!is.null(beep_param)) {
+  if (not.null(beep_param)) {
     should_beep <- beep_param
   }
 

@@ -11,7 +11,7 @@
 write_excel <- function(variable, output_dir = dir_data_out(), should_timestamp_output_files = FALSE) {
   timestamp_param <- getOption('startr.should_timestamp_output_files')
 
-  if (!is.null(timestamp_param)) {
+  if (not.null(timestamp_param)) {
     should_timestamp_output_files <- timestamp_param
   }
 
