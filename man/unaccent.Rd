@@ -17,3 +17,7 @@ Replace accented characters with their non-accented versions. Useful when dealin
 with languages like French, Spanish or Portuguese, where accents can lead to
 compatibility issues during data analysis.
 }
+\examples{
+unaccent('façile')
+
+}

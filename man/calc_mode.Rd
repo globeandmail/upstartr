@@ -15,3 +15,9 @@ The mode of that vector.
 \description{
 Calculates the mode of a given vector.
 }
+\examples{
+calc_mode(c(1, 1, 2, 3, 4))
+calc_mode(c('the', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog'))
+calc_mode(c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE))
+
+}

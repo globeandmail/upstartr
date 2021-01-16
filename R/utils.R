@@ -12,6 +12,9 @@ NULL
 #'
 #' @return An indexed version of the vector.
 #'
+#' @examples index(c(5, 2, 8, 17, 7, 3, 1, -4))
+#' @examples index(c(5, 2, 8, 17, 7, 3, 1, -4), base = 100)
+#'
 #' @export
 index <- function(m, base = 0) {
   if (base != 0) {
@@ -30,6 +33,10 @@ index <- function(m, base = 0) {
 #'
 #' @return The mode of that vector.
 #'
+#' @examples calc_mode(c(1, 1, 2, 3, 4))
+#' @examples calc_mode(c('the', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog'))
+#' @examples calc_mode(c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE))
+#'
 #' @export
 calc_mode <- function(x) {
   ux <- unique(x)
@@ -46,6 +53,8 @@ calc_mode <- function(x) {
 #' @param x A character vector.
 #'
 #' @return A character vector of strings without accents.
+#'
+#' @examples unaccent('façile')
 #'
 #' @export
 unaccent <- function(x) {
@@ -64,6 +73,10 @@ unaccent <- function(x) {
 #'
 #' @return A character vector of strings without non-UTF-8 characters.
 #'
+#' @examples non_utf8 <- 'fa\xE7ile'
+#'   Encoding(non_utf8) <- 'latin1'
+#'   remove_non_utf8(non_utf8)
+#'
 #' @export
 remove_non_utf8 <- function(x) {
   enc <- Encoding(x)
@@ -79,6 +92,8 @@ remove_non_utf8 <- function(x) {
 #' @param x The vector you want to check.
 #' @param table Table in which to do lookups against x.
 #'
+#' @examples c(1, 2, 3, 4, 5) %not_in% c(4, 5, 6, 7, 8)
+#'
 #' @export
 `%not_in%` <- purrr::negate(`%in%`)
 
@@ -88,6 +103,8 @@ remove_non_utf8 <- function(x) {
 #'
 #' @param x A vector to check for NAs against.
 #'
+#' @examples not.na(c(1, NA, 2, NA))
+#'
 #' @export
 not.na <- purrr::negate(is.na)
 
@@ -96,6 +113,8 @@ not.na <- purrr::negate(is.na)
 #' Given a vector, returns TRUE for all entities that aren't NULL.
 #'
 #' @param x A vector to check for NULLs against.
+#'
+#' @examples not.null(c(1, NULL, 2, NULL))
 #'
 #' @export
 not.null <- purrr::negate(is.null)

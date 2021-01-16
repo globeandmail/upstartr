@@ -15,3 +15,9 @@ A character vector of strings without non-UTF-8 characters.
 \description{
 Removes non-UTF-8 characters in a given character vector.
 }
+\examples{
+non_utf8 <- 'fa\xE7ile'
+  Encoding(non_utf8) <- 'latin1'
+  remove_non_utf8(non_utf8)
+
+}

@@ -12,3 +12,7 @@ not.null(x)
 \description{
 Given a vector, returns TRUE for all entities that aren't NULL.
 }
+\examples{
+not.null(c(1, NULL, 2, NULL))
+
+}

@@ -2,8 +2,7 @@ Package: upstartr
 Type: Package
 Title: Utilities Powering Startr Data Journalism Template
 Version: 0.1.0
-Authors@R: c(
-    person("Tom", "Cardoso", email = "tcardoso@globeandmail.com", role = c("aut", "cre"), comment = "creator and maintainer"))
+Authors@R: c(person("Tom", "Cardoso", email = "tcardoso@globeandmail.com", role = c("aut", "cre"), comment = "creator and maintainer"))
 Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
 Description: This package contains the core functions powering The Globe and Mail's R data journalism template, startr.
 License: MIT + file LICENSE
@@ -33,7 +32,7 @@ Suggests:
     testthat (>= 3.0.0),
     withr
 Language: en-US
-URL: https://github.com/globeandmail/upstartr
+URL: https://github.com/globeandmail/upstartr, https://globeandmail.github.io/upstartr
 BugReports: https://github.com/globeandmail/upstartr/issues
 RoxygenNote: 7.1.1
 Config/testthat/edition: 3

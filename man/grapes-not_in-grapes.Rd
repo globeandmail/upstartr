@@ -14,3 +14,7 @@ x \%not_in\% table
 \description{
 Given vectors A and B, returns only the entities from vector A that don't occur in vector B.
 }
+\examples{
+c(1, 2, 3, 4, 5) \%not_in\% c(4, 5, 6, 7, 8)
+
+}

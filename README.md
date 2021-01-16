@@ -25,7 +25,7 @@ library(upstartr)
 
 ### Reference
 
-You can find the full reference manual for `upstartr`'s functions [**here**](https://cran.r-project.org/web/packages/upstartr/upstartr.pdf).
+You can find the full reference manual for `upstartr`'s functions [**here**](https://globeandmail.github.io/upstartr).
 
 
 ### Credits

@@ -19,3 +19,8 @@ Index numeric vector to first value. By default, the index base will be 0,
 turning regular values into percentage change. In some cases, you may want to index
 to a different base, like 100, such as if you're looking at financial data.
 }
+\examples{
+index(c(5, 2, 8, 17, 7, 3, 1, -4))
+index(c(5, 2, 8, 17, 7, 3, 1, -4), base = 100)
+
+}

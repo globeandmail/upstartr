@@ -12,3 +12,7 @@ not.na(x)
 \description{
 Given a vector, returns TRUE for all entities that aren't NA.
 }
+\examples{
+not.na(c(1, NA, 2, NA))
+
+}
