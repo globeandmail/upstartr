@@ -26,7 +26,8 @@ Imports:
     beepr,
     tidytext,
     scales,
-    rmarkdown
+    rmarkdown,
+    textclean
 Suggests:
     sf,
     testthat (>= 3.0.0),

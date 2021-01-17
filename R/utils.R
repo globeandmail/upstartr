@@ -51,18 +51,17 @@ calc_mode <- function(x) {
 #' compatibility issues during data analysis.
 #'
 #' @param x A character vector.
+#' @param remove.nonconverted Should the function remove unmapped encodings? (Default: FALSE)
+#' @param ... Parameters passed to \code{textclean::\link[textclean:replace_non_ascii]{replace_non_ascii}}
 #'
 #' @return A character vector of strings without accents.
 #'
 #' @examples unaccent('façile')
+#' @examples unaccent('Montréal')
 #'
 #' @export
-unaccent <- function(x) {
-  enc <- Encoding(x)
-  final_enc <- 'UTF-8'
-  if (all(enc == dplyr::first(enc))) final_enc <- dplyr::first(enc)
-  if (any(enc == 'unknown')) final_enc <- 'UTF-8'
-  iconv(x, final_enc, to = 'ASCII//TRANSLIT')
+unaccent <- function(x, remove.nonconverted = FALSE, ...) {
+  textclean::replace_non_ascii(x, remove.nonconverted = remove.nonconverted, ...)
 }
 
 #' Removes non-UTF-8 characters
@@ -162,7 +161,7 @@ simplify_string <- function(
     }
 
     if (unaccent) {
-      x_temp <- unaccent(x_temp)
+      x_temp <- unaccent(x_temp, remove.nonconverted = FALSE)
     }
 
     if (is.na(case) | is.null(case) | case == '' | case == 'keep') {

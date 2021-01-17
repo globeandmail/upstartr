@@ -4,10 +4,14 @@
 \alias{unaccent}
 \title{De-accents strings}
 \usage{
-unaccent(x)
+unaccent(x, remove.nonconverted = FALSE, ...)
 }
 \arguments{
 \item{x}{A character vector.}
+
+\item{remove.nonconverted}{Should the function remove unmapped encodings? (Default: FALSE)}
+
+\item{...}{Parameters passed to \code{textclean::\link[textclean:replace_non_ascii]{replace_non_ascii}}}
 }
 \value{
 A character vector of strings without accents.
@@ -19,5 +23,6 @@ compatibility issues during data analysis.
 }
 \examples{
 unaccent('façile')
+unaccent('Montréal')
 
 }

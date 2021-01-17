@@ -25,7 +25,8 @@ non_utf8 <- 'fa\xE7ile'
 Encoding(non_utf8) <- 'latin1'
 
 test_that('unaccent de-accents words', {
-  expect_equal(unaccent('façile'), 'facile')
+  expect_equal(unaccent(non_utf8), 'facile')
+  expect_equal(unaccent('Montréal'), 'Montreal')
 })
 
 test_that('remove_non_utf8 replaces non-UTF-8 characters with UTF-8 ones', {
