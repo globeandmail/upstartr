@@ -106,11 +106,11 @@ not.na <- purrr::negate(is.na)
 
 #' Opposite of is.null
 #'
-#' Given a vector, returns TRUE for all entities that aren't NULL.
+#' Given a list, returns TRUE for all entities that aren't NULL.
 #'
 #' @param x A vector to check for NULLs against.
 #'
-#' @examples not.null(c(1, NULL, 2, NULL))
+#' @examples not.null(list(1, NULL, 2, NULL))
 #'
 #' @export
 not.null <- purrr::negate(is.null)
@@ -176,7 +176,7 @@ simplify_string <- function(
     }
 
     if (!any(is.na(stopwords))) {
-      if (not.null(casing_fn)) stopwords <- casing_fn(stopwords)
+      if (typeof(casing_fn) == 'closure') stopwords <- casing_fn(stopwords)
       stopwords_regex <- paste0('\\b', paste(stopwords, collapse = '\\b|\\b'), '\\b')
       x_temp <- stringr::str_replace_all(x_temp, stopwords_regex, '')
     }

@@ -10,9 +10,9 @@ not.null(x)
 \item{x}{A vector to check for NULLs against.}
 }
 \description{
-Given a vector, returns TRUE for all entities that aren't NULL.
+Given a list, returns TRUE for all entities that aren't NULL.
 }
 \examples{
-not.null(c(1, NULL, 2, NULL))
+not.null(list(1, NULL, 2, NULL))
 
 }
