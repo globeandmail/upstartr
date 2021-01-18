@@ -1,10 +1,10 @@
-test_that('index indexes correctly', {
-  expect_equal(index(c(20, 40, 10)), c(0, 1, -0.5))
-  expect_equal(index(c(20, 40, 10), base = 100), c(100, 200, 50))
+test_that('calc_index indexes correctly', {
+  expect_equal(calc_index(c(20, 40, 10)), c(0, 1, -0.5))
+  expect_equal(calc_index(c(20, 40, 10), base = 100), c(100, 200, 50))
 })
 
 test_that('index correctly uses other bases', {
-  expect_equal(index(c(20, 40, 10), base = 100), c(100, 200, 50))
+  expect_equal(calc_index(c(20, 40, 10), base = 100), c(100, 200, 50))
 })
 
 test_that('calc_mode returns correct mode', {

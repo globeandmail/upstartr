@@ -120,7 +120,7 @@ run_visualize <- function() {
 #' @param should_render_notebook Either TRUE, FALSE, or pulled from the environment if set.
 #'
 #' @export
-run_render_notebook <- function(filename = 'notebook.Rmd', should_beep = TRUE, should_render_notebook = TRUE) {
+run_notebook <- function(filename = 'notebook.Rmd', should_beep = TRUE, should_render_notebook = TRUE) {
   render_notebook_param <- getOption('startr.should_render_notebook')
   beep_param <- getOption('startr.should_beep')
 

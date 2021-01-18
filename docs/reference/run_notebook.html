@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Converts a character vector to logicals — convert_str_to_logical • upstartr</title>
+<title>Runs the notebook rendering step for a startr project. — run_notebook • upstartr</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -43,10 +43,10 @@
 
 
 
-<meta property="og:title" content="Converts a character vector to logicals — convert_str_to_logical" />
+<meta property="og:title" content="Runs the notebook rendering step for a startr project. — run_notebook" />
 
-<meta property="og:description" content="Takes a character vector and converts it to logicals, optionally using
-a vector of patterns to match against for truthy and falsy values." />
+<meta property="og:description" content="Renders an RMarkdown notebook using upstartr::render_notebook
+and then beeps." />
 
 <meta property="og:image" content="https://globeandmail.github.io/upstartr/logo.png" />
 <meta property="og:image:alt" content="upstartr" />
@@ -125,50 +125,42 @@ a vector of patterns to match against for truthy and falsy values." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Converts a character vector to logicals</h1>
-    <small class="dont-index">Source: <a href='https://github.com/globeandmail/upstartr/blob/master/R/helpers.R'><code>R/helpers.R</code></a></small>
-    <div class="hidden name"><code>convert_str_to_logical.Rd</code></div>
+    <h1>Runs the notebook rendering step for a startr project.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/globeandmail/upstartr/blob/master/R/run.R'><code>R/run.R</code></a></small>
+    <div class="hidden name"><code>run_notebook.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Takes a character vector and converts it to logicals, optionally using
-a vector of patterns to match against for truthy and falsy values.</p>
+    <p>Renders an RMarkdown notebook using <code>upstartr::<a href='render_notebook.html'>render_notebook</a></code>
+and then beeps.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>convert_str_to_logical</span><span class='op'>(</span>
-  <span class='va'>x</span>,
-  truthy <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"T"</span>, <span class='st'>"TRUE"</span>, <span class='st'>"Y"</span>, <span class='st'>"YES"</span><span class='op'>)</span>,
-  falsy <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"F"</span>, <span class='st'>"FALSE"</span>, <span class='st'>"N"</span>, <span class='st'>"NO"</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>run_notebook</span><span class='op'>(</span>
+  filename <span class='op'>=</span> <span class='st'>"notebook.Rmd"</span>,
+  should_beep <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  should_render_notebook <span class='op'>=</span> <span class='cn'>TRUE</span>
 <span class='op'>)</span></pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>A character vector.</p></td>
+      <th>filename</th>
+      <td><p>The filename for the RMarkdown notebook you want to render.</p></td>
     </tr>
     <tr>
-      <th>truthy</th>
-      <td><p>A vector of case-insensitive truthy values to turn into TRUE.</p></td>
+      <th>should_beep</th>
+      <td><p>Either TRUE, FALSE, or pulled from the environment if set.</p></td>
     </tr>
     <tr>
-      <th>falsy</th>
-      <td><p>A vector of case-insensitive falsy values to turn into FALSE.</p></td>
+      <th>should_render_notebook</th>
+      <td><p>Either TRUE, FALSE, or pulled from the environment if set.</p></td>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A logical vector.</p>
-    
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>convert_str_to_logical</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'YES'</span>, <span class='st'>'Y'</span>, <span class='st'>'No'</span>, <span class='st'>'N'</span>, <span class='st'>'YES'</span>, <span class='st'>'yes'</span>, <span class='st'>'no'</span>, <span class='st'>'Yes'</span>, <span class='st'>'NO'</span>, <span class='st'>'Y'</span>, <span class='st'>'y'</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE  TRUE</div><div class='input'>
-</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

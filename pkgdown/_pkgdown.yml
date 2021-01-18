@@ -5,6 +5,7 @@ pkgdown_sha: ~
 authors:
   Tom Cardoso:
     href: https://www.theglobeandmail.com/authors/tom-cardoso
+
 template:
   params:
     bootswatch: simplex
@@ -16,3 +17,39 @@ template:
       creator: "@tom_cardoso"
       card: summary_large_image
       site: "https://globeandmail.github.io/upstartr/"
+
+reference:
+  - title: Startr-specific
+    desc: Functions specific to running a startr-templated project
+  - contents:
+    - initialize_startr
+    - starts_with("run_")
+    - begin_processing
+    - end_processing
+    - render_notebook
+    - starts_with("dir_")
+  - title: Helpers
+  - contents:
+    - calc_index
+    - calc_mode
+    - unaccent
+    - remove_non_utf8
+    - "%not_in%"
+    - not.na
+    - not.null
+    - simplify_string
+    - clean_columns
+    - convert_str_to_logical
+  - title: Reading
+  - contents:
+    - starts_with("read_")
+    - starts_with("combine_")
+  - title: Writing
+  - contents:
+    - starts_with("write_")
+  - title: Graphics
+  - contents:
+    - starts_with("scale_")
+    - reorder_within
+    - scale_x_reordered
+    - scale_y_reordered

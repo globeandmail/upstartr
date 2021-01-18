@@ -136,8 +136,8 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
+          <h2 id="section-startr-specific" class="hasAnchor"><a href="#section-startr-specific" class="anchor"></a>Startr-specific</h2>
+          <p class="section-desc"><p>Functions specific to running a startr-templated project</p></p>
         </th>
       </tr>
       
@@ -148,39 +148,57 @@
       <tr>
         
         <td>
+          <p><code><a href="initialize_startr.html">initialize_startr()</a></code> </p>
+        </td>
+        <td><p>Initialize startr project</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="run_analyze.html">run_analyze()</a></code> </p>
+        </td>
+        <td><p>Runs the analysis step for a startr project.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="run_config.html">run_config()</a></code> </p>
+        </td>
+        <td><p>Configures an existing startr project</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="run_notebook.html">run_notebook()</a></code> </p>
+        </td>
+        <td><p>Runs the notebook rendering step for a startr project.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="run_process.html">run_process()</a></code> </p>
+        </td>
+        <td><p>Runs the processing step on a startr project.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="run_visualize.html">run_visualize()</a></code> </p>
+        </td>
+        <td><p>Runs the visualization step for a startr project.</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="begin_processing.html">begin_processing()</a></code> </p>
         </td>
         <td><p>Runs the pre-processing step on a startr project.</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="calc_mode.html">calc_mode()</a></code> </p>
+          <p><code><a href="end_processing.html">end_processing()</a></code> </p>
         </td>
-        <td><p>Calculate mode</p></td>
+        <td><p>Runs the post-processing step on a startr project.</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="clean_columns.html">clean_columns()</a></code> </p>
+          <p><code><a href="render_notebook.html">render_notebook()</a></code> </p>
         </td>
-        <td><p>Cleans up column names by forcing them into tidyverse style</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="combine_csvs.html">combine_csvs()</a></code> </p>
-        </td>
-        <td><p>Combine CSVs in a directory</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="combine_excels.html">combine_excels()</a></code> </p>
-        </td>
-        <td><p>Combine Excel files in a directory</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="convert_str_to_logical.html">convert_str_to_logical()</a></code> </p>
-        </td>
-        <td><p>Converts a character vector to logicals</p></td>
+        <td><p>Renders out an RMarkdown notebook.</p></td>
       </tr><tr>
         
         <td>
@@ -235,30 +253,49 @@
           <p><code><a href="dir_src.html">dir_src()</a></code> </p>
         </td>
         <td><p>Get path within src directory</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-helpers" class="hasAnchor"><a href="#section-helpers" class="anchor"></a>Helpers</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="calc_index.html">calc_index()</a></code> </p>
+        </td>
+        <td><p>Index values</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="end_processing.html">end_processing()</a></code> </p>
+          <p><code><a href="calc_mode.html">calc_mode()</a></code> </p>
         </td>
-        <td><p>Runs the post-processing step on a startr project.</p></td>
+        <td><p>Calculate mode</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="unaccent.html">unaccent()</a></code> </p>
+        </td>
+        <td><p>De-accents strings</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="remove_non_utf8.html">remove_non_utf8()</a></code> </p>
+        </td>
+        <td><p>Removes non-UTF-8 characters</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="grapes-not_in-grapes.html">`%not_in%`</a></code> </p>
         </td>
         <td><p>Opposite of %in%</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="index-topic.html">index()</a></code> </p>
-        </td>
-        <td><p>Index values</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="initialize_startr.html">initialize_startr()</a></code> </p>
-        </td>
-        <td><p>Initialize startr project</p></td>
       </tr><tr>
         
         <td>
@@ -274,76 +311,66 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="read_all_excel_sheets.html">read_all_excel_sheets()</a></code> </p>
-        </td>
-        <td><p>Combine all sheets in an Excel file</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="remove_non_utf8.html">remove_non_utf8()</a></code> </p>
-        </td>
-        <td><p>Removes non-UTF-8 characters</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="render_notebook.html">render_notebook()</a></code> </p>
-        </td>
-        <td><p>Renders out an RMarkdown notebook.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="run_analyze.html">run_analyze()</a></code> </p>
-        </td>
-        <td><p>Runs the analysis step for a startr project.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="run_config.html">run_config()</a></code> </p>
-        </td>
-        <td><p>Configures an existing startr project</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="run_process.html">run_process()</a></code> </p>
-        </td>
-        <td><p>Runs the processing step on a startr project.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="run_render_notebook.html">run_render_notebook()</a></code> </p>
-        </td>
-        <td><p>Runs the notebook rendering step for a startr project.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="run_visualize.html">run_visualize()</a></code> </p>
-        </td>
-        <td><p>Runs the visualization step for a startr project.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scale_x_percent.html">scale_x_percent()</a></code> </p>
-        </td>
-        <td><p>Create a continuous x-axis scale using percentages</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scale_y_percent.html">scale_y_percent()</a></code> </p>
-        </td>
-        <td><p>Create a continuous y-axis scale using percentages</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="simplify_string.html">simplify_string()</a></code> </p>
         </td>
         <td><p>Simplifies strings for analysis</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="unaccent.html">unaccent()</a></code> </p>
+          <p><code><a href="clean_columns.html">clean_columns()</a></code> </p>
         </td>
-        <td><p>De-accents strings</p></td>
+        <td><p>Cleans up column names by forcing them into tidyverse style</p></td>
       </tr><tr>
+        
+        <td>
+          <p><code><a href="convert_str_to_logical.html">convert_str_to_logical()</a></code> </p>
+        </td>
+        <td><p>Converts a character vector to logicals</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-reading" class="hasAnchor"><a href="#section-reading" class="anchor"></a>Reading</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="read_all_excel_sheets.html">read_all_excel_sheets()</a></code> </p>
+        </td>
+        <td><p>Combine all sheets in an Excel file</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="combine_csvs.html">combine_csvs()</a></code> </p>
+        </td>
+        <td><p>Combine CSVs in a directory</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="combine_excels.html">combine_excels()</a></code> </p>
+        </td>
+        <td><p>Combine Excel files in a directory</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-writing" class="hasAnchor"><a href="#section-writing" class="anchor"></a>Writing</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
         
         <td>
           <p><code><a href="write_excel.html">write_excel()</a></code> </p>
@@ -361,6 +388,49 @@
           <p><code><a href="write_shp.html">write_shp()</a></code> </p>
         </td>
         <td><p>Write a shapefile to disk</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-graphics" class="hasAnchor"><a href="#section-graphics" class="anchor"></a>Graphics</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="scale_x_percent.html">scale_x_percent()</a></code> </p>
+        </td>
+        <td><p>Create a continuous x-axis scale using percentages</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="scale_y_percent.html">scale_y_percent()</a></code> </p>
+        </td>
+        <td><p>Create a continuous y-axis scale using percentages</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="reorder_within.html">reorder_within</a></code> </p>
+        </td>
+        <td><p>Reorder an x or y axis within facets</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="scale_x_reordered.html">scale_x_reordered</a></code> </p>
+        </td>
+        <td><p>Passed after reorder_within to reorder x-axis along facets</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="scale_y_reordered.html">scale_y_reordered</a></code> </p>
+        </td>
+        <td><p>Passed after reorder_within to reorder x-axis along facets</p></td>
       </tr>
     </tbody>
     </table>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Converts a character vector to logicals — convert_str_to_logical • upstartr</title>
+<title>Index values — calc_index • upstartr</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -43,10 +43,11 @@
 
 
 
-<meta property="og:title" content="Converts a character vector to logicals — convert_str_to_logical" />
+<meta property="og:title" content="Index values — calc_index" />
 
-<meta property="og:description" content="Takes a character vector and converts it to logicals, optionally using
-a vector of patterns to match against for truthy and falsy values." />
+<meta property="og:description" content="Index numeric vector to first value. By default, the index base will be 0,
+turning regular values into percentage change. In some cases, you may want to index
+to a different base, like 100, such as if you're looking at financial data." />
 
 <meta property="og:image" content="https://globeandmail.github.io/upstartr/logo.png" />
 <meta property="og:image:alt" content="upstartr" />
@@ -125,49 +126,43 @@ a vector of patterns to match against for truthy and falsy values." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Converts a character vector to logicals</h1>
+    <h1>Index values</h1>
     <small class="dont-index">Source: <a href='https://github.com/globeandmail/upstartr/blob/master/R/helpers.R'><code>R/helpers.R</code></a></small>
-    <div class="hidden name"><code>convert_str_to_logical.Rd</code></div>
+    <div class="hidden name"><code>calc_index.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Takes a character vector and converts it to logicals, optionally using
-a vector of patterns to match against for truthy and falsy values.</p>
+    <p>Index numeric vector to first value. By default, the index base will be 0,
+turning regular values into percentage change. In some cases, you may want to index
+to a different base, like 100, such as if you're looking at financial data.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>convert_str_to_logical</span><span class='op'>(</span>
-  <span class='va'>x</span>,
-  truthy <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"T"</span>, <span class='st'>"TRUE"</span>, <span class='st'>"Y"</span>, <span class='st'>"YES"</span><span class='op'>)</span>,
-  falsy <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"F"</span>, <span class='st'>"FALSE"</span>, <span class='st'>"N"</span>, <span class='st'>"NO"</span><span class='op'>)</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>calc_index</span><span class='op'>(</span><span class='va'>m</span>, base <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span></pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>A character vector.</p></td>
+      <th>m</th>
+      <td><p>Numeric vector to index to first value.</p></td>
     </tr>
     <tr>
-      <th>truthy</th>
-      <td><p>A vector of case-insensitive truthy values to turn into TRUE.</p></td>
-    </tr>
-    <tr>
-      <th>falsy</th>
-      <td><p>A vector of case-insensitive falsy values to turn into FALSE.</p></td>
+      <th>base</th>
+      <td><p>Base to index against. (Default: 0)</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A logical vector.</p>
+    <p>An indexed version of the vector.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>convert_str_to_logical</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'YES'</span>, <span class='st'>'Y'</span>, <span class='st'>'No'</span>, <span class='st'>'N'</span>, <span class='st'>'YES'</span>, <span class='st'>'yes'</span>, <span class='st'>'no'</span>, <span class='st'>'Yes'</span>, <span class='st'>'NO'</span>, <span class='st'>'Y'</span>, <span class='st'>'y'</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE  TRUE</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>calc_index</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>2</span>, <span class='fl'>8</span>, <span class='fl'>17</span>, <span class='fl'>7</span>, <span class='fl'>3</span>, <span class='fl'>1</span>, <span class='op'>-</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1]  0.0 -0.6  0.6  2.4  0.4 -0.4 -0.8 -1.8</div><div class='input'><span class='fu'>calc_index</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>2</span>, <span class='fl'>8</span>, <span class='fl'>17</span>, <span class='fl'>7</span>, <span class='fl'>3</span>, <span class='fl'>1</span>, <span class='op'>-</span><span class='fl'>4</span><span class='op'>)</span>, base <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 100  40 160 340 140  60  20 -80</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
