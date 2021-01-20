@@ -59,7 +59,14 @@ initialize_startr <- function(
 
     librarian::shelf(packages, lib = NULL)
 
-    if (set_minimal_graphics_theme) ggplot2::theme_set(ggplot2::theme_minimal())
+    if ('globeandmail/tgamtheme' %in% packages) {
+      ggplot2::theme_set(tgam_theme())
+      update_geom_defaults('line', list(size = 1, lineend = 'round', colour = tgam_cols('burgundy')))
+      update_geom_defaults('col', list(fill = tgam_cols('burgundy')))
+      update_geom_defaults('bar', list(fill = tgam_cols('burgundy')))
+    } else if (set_minimal_graphics_theme) {
+      ggplot2::theme_set(ggplot2::theme_minimal())
+    }
 
     knitr::opts_chunk$set(
       eval = TRUE,
