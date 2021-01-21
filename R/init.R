@@ -62,8 +62,15 @@ initialize_startr <- function(
     if ('globeandmail/tgamtheme' %in% packages) {
       ggplot2::theme_set(tgam_theme())
       update_geom_defaults('line', list(size = 1, lineend = 'round', colour = tgam_cols('burgundy')))
+      update_geom_defaults('path', list(size = 1, lineend = 'round', colour = tgam_cols('burgundy')))
+      update_geom_defaults('density', list(size = 1, colour = tgam_cols('burgundy')))
+      update_geom_defaults('point', list(size = 2, colour = tgam_cols('burgundy')))
+      update_geom_defaults('jitter', list(size = 2, colour = tgam_cols('burgundy')))
       update_geom_defaults('col', list(fill = tgam_cols('burgundy')))
       update_geom_defaults('bar', list(fill = tgam_cols('burgundy')))
+      update_geom_defaults('histogram', list(fill = tgam_cols('burgundy')))
+      update_geom_defaults('ribbon', list(fill = tgam_cols('burgundy')))
+      update_geom_defaults('area', list(fill = tgam_cols('burgundy')))      
     } else if (set_minimal_graphics_theme) {
       ggplot2::theme_set(ggplot2::theme_minimal())
     }
