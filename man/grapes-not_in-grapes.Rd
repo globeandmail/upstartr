@@ -12,7 +12,7 @@ x \%not_in\% table
 \item{table}{Table in which to do lookups against x.}
 }
 \value{
-Same form of return as %in% — the elements on the lhs that are present in the rhs
+Same form of return as \%in\% — except it will return only elements on the lhs that aren't present on the rhs
 }
 \description{
 Given vectors A and B, returns only the entities from vector A that don't occur in vector B.

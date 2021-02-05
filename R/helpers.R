@@ -90,7 +90,7 @@ remove_non_utf8 <- function(x) {
 #'
 #' @examples c(1, 2, 3, 4, 5) %not_in% c(4, 5, 6, 7, 8)
 #'
-#' @return Same form of return as %in% — the elements on the lhs that are present in the rhs
+#' @return Same form of return as \%in\% — except it will return only elements on the lhs that aren't present on the rhs
 #'
 #' @export
 `%not_in%` <- purrr::negate(`%in%`)
