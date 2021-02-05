@@ -2,6 +2,8 @@
 #'
 #' Sources \code{config.R} and \code{functions.R} in turn.
 #'
+#' @return No return value, called for side effects
+#'
 #' @export
 run_config <- function() {
   source(here::here('config.R'))
@@ -15,6 +17,8 @@ run_config <- function() {
 #' (see \code{upstartr::\link[upstartr:end_processing]{end_processing}} for details).
 #'
 #' @param should_process_data Either TRUE, FALSE, or pulled from the environment if set.
+#'
+#' @return No return value, called for side effects
 #'
 #' @export
 run_process <- function(should_process_data = TRUE) {
@@ -39,6 +43,8 @@ run_process <- function(should_process_data = TRUE) {
 #' post-processing step to keep the startr environment unpolluted.
 #'
 #' @param should_clean_processing_variables Either TRUE, FALSE, or pulled from the environment if set.
+#'
+#' @return A list of all environment variables present before the function was run
 #'
 #' @export
 begin_processing <- function(should_clean_processing_variables = TRUE) {
@@ -68,6 +74,8 @@ begin_processing <- function(should_clean_processing_variables = TRUE) {
 #' @param should_beep Either TRUE, FALSE, or pulled from the environment if set.
 #' @param logged_vars A list of variables that existed before the processing step began.
 #'
+#' @return No return value, called for side effects
+#'
 #' @export
 end_processing <- function(should_clean_processing_variables = TRUE, should_beep = TRUE, logged_vars = NULL) {
   clean_processing_variables_param <- getOption('startr.should_clean_processing_variables')
@@ -96,6 +104,8 @@ end_processing <- function(should_clean_processing_variables = TRUE, should_beep
 #'
 #' Sources \code{analyze.R}.
 #'
+#' @return No return value, called for side effects
+#'
 #' @export
 run_analyze <- function() {
   source(dir_src('analyze.R'))
@@ -104,6 +114,8 @@ run_analyze <- function() {
 #' Runs the visualization step for a startr project.
 #'
 #' Sources \code{visualize.R}.
+#'
+#' @return No return value, called for side effects
 #'
 #' @export
 run_visualize <- function() {
@@ -118,6 +130,8 @@ run_visualize <- function() {
 #' @param filename The filename for the RMarkdown notebook you want to render.
 #' @param should_beep Either TRUE, FALSE, or pulled from the environment if set.
 #' @param should_render_notebook Either TRUE, FALSE, or pulled from the environment if set.
+#'
+#' @return No return value, called for side effects
 #'
 #' @export
 run_notebook <- function(filename = 'notebook.Rmd', should_beep = TRUE, should_render_notebook = TRUE) {
@@ -143,6 +157,8 @@ run_notebook <- function(filename = 'notebook.Rmd', should_beep = TRUE, should_r
 #'
 #' @param notebook_file The path for the RMarkdown notebook you're rendering.
 #' @param output_dir The directory to write the outputs to.
+#'
+#' @return No return value, called for side effects
 #'
 #' @export
 render_notebook <- function(notebook_file, output_dir = dir_reports()) {

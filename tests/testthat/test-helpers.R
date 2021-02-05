@@ -92,7 +92,6 @@ test_that('simplify_string doesn\'t trip on NAs, NULLs or empty strings', {
   expect_equal(simplify_string(c('Hello World!', NA, 'Test', NULL, '', 'Hi there', character(0))), c('HELLO WORLD', NA, 'TEST', '', 'HI THERE'))
 })
 
-
 test_that('clean_columns forces names into tidyverse style', {
   cols <- c('Date of Purchase', 'Item No.', 'description', 'Transaction at Jane\'s Counter?', 'Auditing - Worth it?')
   expect_equal(clean_columns(cols), c('date_of_purchase', 'item_no', 'description', 'transaction_at_janes_counter', 'auditing_worth_it'))

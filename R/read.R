@@ -7,7 +7,7 @@
 #' @param pattern Pattern to use for detecting files. (Default: '*.csv')
 #' @param ... Parameters to pass to \code{readr::\link[readr:read_csv]{read_csv}}.
 #'
-#' @return A tibble of concatenated CSV data.
+#' @return A tibble of concatenated data from multiple CSV files.
 #'
 #' @export
 combine_csvs <- function(dir, pattern = '*.csv', ...) {
@@ -26,7 +26,7 @@ combine_csvs <- function(dir, pattern = '*.csv', ...) {
 #' @param filepath Path to the Excel file.
 #' @param ... Parameters to pass to \code{readxl::\link[readxl:read_excel]{read_excel}}.
 #'
-#' @return A tibble of concatenated Excel data.
+#' @return A tibble data concatenated from a all sheets in an Excel file.
 #'
 #' @export
 read_all_excel_sheets <- function(filepath, ...) {
@@ -49,7 +49,7 @@ read_all_excel_sheets <- function(filepath, ...) {
 #'   Excel file into one long tibble? (Default: FALSE)
 #' @param ... Parameters to pass to \code{readxl::\link[readxl:read_excel]{read_excel}}.
 #'
-#' @return A tibble of concatenated Excel data.
+#' @return A tibble of concatenated data from multiple Excel files.
 #'
 #' @export
 combine_excels <- function(dir, pattern = '*.xls[x]?', all_sheets = FALSE, ...) {

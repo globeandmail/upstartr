@@ -18,6 +18,8 @@
 #' @param packages Vector of package names, from CRAN, Github or Bioconductor to be installed.
 #'   If using GitHub, package names should be in the format 'globeandmail/upstartr'.
 #'
+#' @return No return value, called for side effects
+#'
 #' @export
 initialize_startr <- function(
     author,
@@ -59,18 +61,18 @@ initialize_startr <- function(
 
     librarian::shelf(packages, lib = NULL)
 
-    if ('globeandmail/tgamtheme' %in% packages) {
-      ggplot2::theme_set(tgam_theme())
-      update_geom_defaults('line', list(size = 1, lineend = 'round', colour = tgam_cols('burgundy')))
-      update_geom_defaults('path', list(size = 1, lineend = 'round', colour = tgam_cols('burgundy')))
-      update_geom_defaults('density', list(size = 1, colour = tgam_cols('burgundy')))
-      update_geom_defaults('point', list(size = 2, colour = tgam_cols('burgundy')))
-      update_geom_defaults('jitter', list(size = 2, colour = tgam_cols('burgundy')))
-      update_geom_defaults('col', list(fill = tgam_cols('burgundy')))
-      update_geom_defaults('bar', list(fill = tgam_cols('burgundy')))
-      update_geom_defaults('histogram', list(fill = tgam_cols('burgundy')))
-      update_geom_defaults('ribbon', list(fill = tgam_cols('burgundy')))
-      update_geom_defaults('area', list(fill = tgam_cols('burgundy')))      
+    if ('tgamtheme' %in% packages) {
+      ggplot2::theme_set(tgamtheme::theme_tgam())
+      ggplot2::update_geom_defaults('line', list(size = 1, lineend = 'round', colour = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('path', list(size = 1, lineend = 'round', colour = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('density', list(size = 1, colour = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('point', list(size = 2, colour = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('jitter', list(size = 2, colour = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('col', list(fill = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('bar', list(fill = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('histogram', list(fill = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('ribbon', list(fill = tgamtheme::tgam_cols('burgundy')))
+      ggplot2::update_geom_defaults('area', list(fill = tgamtheme::tgam_cols('burgundy')))
     } else if (set_minimal_graphics_theme) {
       ggplot2::theme_set(ggplot2::theme_minimal())
     }

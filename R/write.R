@@ -7,6 +7,8 @@
 #' @param output_dir The directory to save the file out to.
 #' @param should_timestamp_output_files Either TRUE, FALSE, or pulled from the environment if set.
 #'
+#' @return No return value, called for side effects
+#'
 #' @export
 write_excel <- function(variable, output_dir = dir_data_out(), should_timestamp_output_files = FALSE) {
   timestamp_param <- getOption('startr.should_timestamp_output_files')
@@ -34,6 +36,8 @@ write_excel <- function(variable, output_dir = dir_data_out(), should_timestamp_
 #' @param output_dir The directory to save the plot out to.
 #' @param ... Other settings to pass to ggsave, such as format, width, height or dpi.
 #'
+#' @return No return value, called for side effects
+#'
 #' @export
 write_plot <- function(variable, output_dir = dir_plots(), ...) {
   filename <- deparse(substitute(variable))
@@ -60,6 +64,8 @@ write_plot <- function(variable, output_dir = dir_plots(), ...) {
 #' @param shp A spatial object.
 #' @param path The desired filepath for the shapefile.
 #' @param ... Other settings to pass to st_write, such as format, width, height or dpi.
+#'
+#' @return No return value, called for side effects
 #'
 #' @export
 write_shp <- function(shp, path, ...) {

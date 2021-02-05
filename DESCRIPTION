@@ -1,10 +1,10 @@
 Package: upstartr
 Type: Package
-Title: Utilities Powering Startr Data Journalism Template
+Title: Utilities Powering The Globe and Mail's Data Journalism Template
 Version: 0.1.0
 Authors@R: c(person("Tom", "Cardoso", email = "tcardoso@globeandmail.com", role = c("aut", "cre"), comment = "creator and maintainer"))
 Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
-Description: Core functions powering The Globe and Mail's R data journalism template, startr, along with utilities for day-to-day data journalism tasks.
+Description: Core functions necessary for using The Globe and Mail's R data journalism template, 'startr', along with utilities for day-to-day data journalism tasks, such as reading and writing files, producing graphics and cleaning up datasets.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -27,11 +27,11 @@ Imports:
     tidytext,
     scales,
     rmarkdown,
-    textclean
-Suggests:
+    textclean,
     sf,
-    testthat (>= 3.0.0),
-    withr
+    tgamtheme
+Suggests:
+    testthat (>= 3.0.0)
 Language: en-US
 URL: https://github.com/globeandmail/upstartr, https://globeandmail.github.io/upstartr
 BugReports: https://github.com/globeandmail/upstartr/issues

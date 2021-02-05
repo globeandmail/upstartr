@@ -7,7 +7,7 @@
 #' @param m Numeric vector to index to first value.
 #' @param base Base to index against. (Default: 0)
 #'
-#' @return An indexed version of the vector.
+#' @return An vector of indexed values.
 #'
 #' @examples calc_index(c(5, 2, 8, 17, 7, 3, 1, -4))
 #' @examples calc_index(c(5, 2, 8, 17, 7, 3, 1, -4), base = 100)
@@ -28,7 +28,7 @@ calc_index <- function(m, base = 0) {
 #'
 #' @param x Any kind of vector — numeric, character, logical.
 #'
-#' @return The mode of that vector.
+#' @return The mode(s) of that vector.
 #'
 #' @examples calc_mode(c(1, 1, 2, 3, 4))
 #' @examples calc_mode(c('the', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog'))
@@ -90,6 +90,8 @@ remove_non_utf8 <- function(x) {
 #'
 #' @examples c(1, 2, 3, 4, 5) %not_in% c(4, 5, 6, 7, 8)
 #'
+#' @return Same form of return as %in% — the elements on the lhs that are present in the rhs
+#'
 #' @export
 `%not_in%` <- purrr::negate(`%in%`)
 
@@ -101,6 +103,8 @@ remove_non_utf8 <- function(x) {
 #'
 #' @examples not.na(c(1, NA, 2, NA))
 #'
+#' @return A vector of elements that aren't NA
+#'
 #' @export
 not.na <- purrr::negate(is.na)
 
@@ -111,6 +115,8 @@ not.na <- purrr::negate(is.na)
 #' @param x A vector to check for NULLs against.
 #'
 #' @examples not.null(list(1, NULL, 2, NULL))
+#'
+#' @return Elements that aren't NULL
 #'
 #' @export
 not.null <- purrr::negate(is.null)
