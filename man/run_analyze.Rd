@@ -6,6 +6,9 @@
 \usage{
 run_analyze()
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Sources \code{analyze.R}.
 }

@@ -13,6 +13,9 @@ write_shp(shp, path, ...)
 
 \item{...}{Other settings to pass to st_write, such as format, width, height or dpi.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Utility function that wraps \code{sf::\link[sf:st_write]{st_write}}, but first
 removes a previous version of the shapefile if it exists (by default, \code{sf::\link[sf:st_write]{st_write}}

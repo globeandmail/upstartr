@@ -17,6 +17,9 @@ end_processing(
 
 \item{logged_vars}{A list of variables that existed before the processing step began.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 The post-processing step, run as part of \code{upstartr::\link[upstartr:run_process]{run_process}}
 during the \code{process.R} stage of a startr project, removes all variables

@@ -12,7 +12,7 @@ read_all_excel_sheets(filepath, ...)
 \item{...}{Parameters to pass to \code{readxl::\link[readxl:read_excel]{read_excel}}.}
 }
 \value{
-A tibble of concatenated Excel data.
+A tibble data concatenated from a all sheets in an Excel file.
 }
 \description{
 Reads all sheets in a single Excel file using \code{readxl::\link[readxl:read_excel]{read_excel}}

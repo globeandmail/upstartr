@@ -14,7 +14,7 @@ combine_csvs(dir, pattern = "*.csv", ...)
 \item{...}{Parameters to pass to \code{readr::\link[readr:read_csv]{read_csv}}.}
 }
 \value{
-A tibble of concatenated CSV data.
+A tibble of concatenated data from multiple CSV files.
 }
 \description{
 Given a directory (and, optionally, a pattern to search against),

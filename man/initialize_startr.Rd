@@ -43,6 +43,9 @@ from the environment after processing is complete. (Default: TRUE)}
 \item{packages}{Vector of package names, from CRAN, Github or Bioconductor to be installed.
 If using GitHub, package names should be in the format 'globeandmail/upstartr'.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Used to initialize a startr template for analysis. Will enforce some startr-required
 standards for analysis (such as removing scientific notation, setting timezones, and

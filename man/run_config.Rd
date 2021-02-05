@@ -6,6 +6,9 @@
 \usage{
 run_config()
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Sources \code{config.R} and \code{functions.R} in turn.
 }

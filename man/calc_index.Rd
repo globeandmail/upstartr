@@ -12,7 +12,7 @@ calc_index(m, base = 0)
 \item{base}{Base to index against. (Default: 0)}
 }
 \value{
-An indexed version of the vector.
+An vector of indexed values.
 }
 \description{
 Index numeric vector to first value. By default, the index base will be 0,

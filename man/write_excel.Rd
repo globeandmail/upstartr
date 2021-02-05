@@ -17,6 +17,9 @@ write_excel(
 
 \item{should_timestamp_output_files}{Either TRUE, FALSE, or pulled from the environment if set.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Takes a tibble or dataframe variable and saves it out as an Excel file
 using the variable name as the filename.

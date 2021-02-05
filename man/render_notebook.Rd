@@ -11,6 +11,9 @@ render_notebook(notebook_file, output_dir = dir_reports())
 
 \item{output_dir}{The directory to write the outputs to.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Renders an RMarkdown notebook using \code{upstartr::\link[upstartr:render_notebook]{render_notebook}}
 and then beeps.

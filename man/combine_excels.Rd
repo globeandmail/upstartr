@@ -17,7 +17,7 @@ Excel file into one long tibble? (Default: FALSE)}
 \item{...}{Parameters to pass to \code{readxl::\link[readxl:read_excel]{read_excel}}.}
 }
 \value{
-A tibble of concatenated Excel data.
+A tibble of concatenated data from multiple Excel files.
 }
 \description{
 Given a directory (and, optionally, a pattern to search against),

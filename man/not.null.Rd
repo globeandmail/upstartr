@@ -9,6 +9,9 @@ not.null(x)
 \arguments{
 \item{x}{A vector to check for NULLs against.}
 }
+\value{
+Elements that aren't NULL
+}
 \description{
 Given a list, returns TRUE for all entities that aren't NULL.
 }

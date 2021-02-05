@@ -10,7 +10,7 @@ calc_mode(x)
 \item{x}{Any kind of vector — numeric, character, logical.}
 }
 \value{
-The mode of that vector.
+The mode(s) of that vector.
 }
 \description{
 Calculates the mode of a given vector.

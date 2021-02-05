@@ -9,6 +9,9 @@ begin_processing(should_clean_processing_variables = TRUE)
 \arguments{
 \item{should_clean_processing_variables}{Either TRUE, FALSE, or pulled from the environment if set.}
 }
+\value{
+A list of all environment variables present before the function was run
+}
 \description{
 The pre-processing step, run as part of \code{upstartr::\link[upstartr:run_process]{run_process}}
 during the \code{process.R} stage of a startr project, logs all variables

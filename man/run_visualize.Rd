@@ -6,6 +6,9 @@
 \usage{
 run_visualize()
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Sources \code{visualize.R}.
 }

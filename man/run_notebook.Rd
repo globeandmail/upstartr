@@ -17,6 +17,9 @@ run_notebook(
 
 \item{should_render_notebook}{Either TRUE, FALSE, or pulled from the environment if set.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Renders an RMarkdown notebook using \code{upstartr::\link[upstartr:render_notebook]{render_notebook}}
 and then beeps.

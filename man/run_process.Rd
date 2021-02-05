@@ -9,6 +9,9 @@ run_process(should_process_data = TRUE)
 \arguments{
 \item{should_process_data}{Either TRUE, FALSE, or pulled from the environment if set.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Runs the pre-processing step (see \code{upstartr::\link[upstartr:begin_processing]{begin_processing}}
 for details), then sources \code{process.R}, then runs the post-processing step
