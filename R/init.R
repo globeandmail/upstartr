@@ -67,7 +67,6 @@ initialize_startr <- function(
       ggplot2::update_geom_defaults('path', list(size = 1, lineend = 'round', colour = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('density', list(size = 1, colour = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('point', list(size = 2, colour = tgamtheme::tgam_cols('burgundy')))
-      ggplot2::update_geom_defaults('jitter', list(size = 2, colour = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('col', list(fill = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('bar', list(fill = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('histogram', list(fill = tgamtheme::tgam_cols('burgundy')))
