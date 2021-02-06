@@ -1,6 +1,6 @@
 Package: upstartr
 Type: Package
-Title: Utilities Powering The Globe and Mail's Data Journalism Template
+Title: Utilities Powering the Globe and Mail's Data Journalism Template
 Version: 0.1.0
 Authors@R: c(person("Tom", "Cardoso", email = "tcardoso@globeandmail.com", role = c("aut", "cre"), comment = "creator and maintainer"))
 Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
@@ -33,7 +33,7 @@ Imports:
 Suggests:
     testthat (>= 3.0.0)
 Language: en-US
-URL: https://github.com/globeandmail/upstartr, https://globeandmail.github.io/upstartr
+URL: https://github.com/globeandmail/upstartr, https://globeandmail.github.io/upstartr/
 BugReports: https://github.com/globeandmail/upstartr/issues
 RoxygenNote: 7.1.1
 Config/testthat/edition: 3

@@ -7,7 +7,7 @@
 scale_x_percent(...)
 }
 \arguments{
-\item{...}{All your usual continous x-axis scale parameters.}
+\item{...}{All your usual continuous x-axis scale parameters.}
 }
 \value{
 A scale object to be consumed by ggplot2.

@@ -8,7 +8,7 @@
 #' @param title Title of the startr project
 #' @param scipen Which level of scientific precision to use. (Default: 999)
 #' @param timezone The timezone for analysis. (Default: 'America/Toronto')
-#' @param should_render_notebook Whether the RMarkdown notebook should berendered. (Default: FALSE)
+#' @param should_render_notebook Whether the RMarkdown notebook should be rendered. (Default: FALSE)
 #' @param should_process_data Whether startr's process step should be run. (Default: TRUE)
 #' @param should_timestamp_output_files Whether write_excel's output files should be timestamped. (Default: FALSE)
 #' @param should_clean_processing_variables Whether processing variables should be cleaned

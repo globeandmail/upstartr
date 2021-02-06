@@ -32,7 +32,7 @@ NULL
 #'
 #' Convenience function to return a scale_x_continuous function using percentage labels.
 #'
-#' @param ... All your usual continous x-axis scale parameters.
+#' @param ... All your usual continuous x-axis scale parameters.
 #'
 #' @return A scale object to be consumed by ggplot2.
 #'
@@ -45,7 +45,7 @@ scale_x_percent <- function(...) {
 #'
 #' Convenience function to return a scale_y_continuous function using percentage labels.
 #'
-#' @param ... All your usual continous y-axis scale parameters.
+#' @param ... All your usual continuous y-axis scale parameters.
 #'
 #' @return A scale object to be consumed by ggplot2.
 #'

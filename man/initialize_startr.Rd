@@ -27,7 +27,7 @@ initialize_startr(
 
 \item{timezone}{The timezone for analysis. (Default: 'America/Toronto')}
 
-\item{should_render_notebook}{Whether the RMarkdown notebook should berendered. (Default: FALSE)}
+\item{should_render_notebook}{Whether the RMarkdown notebook should be rendered. (Default: FALSE)}
 
 \item{should_process_data}{Whether startr's process step should be run. (Default: TRUE)}
 
