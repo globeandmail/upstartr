@@ -69,7 +69,6 @@ initialize_startr <- function(
       ggplot2::update_geom_defaults('point', list(size = 2, colour = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('col', list(fill = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('bar', list(fill = tgamtheme::tgam_cols('burgundy')))
-      ggplot2::update_geom_defaults('histogram', list(fill = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('ribbon', list(fill = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('area', list(fill = tgamtheme::tgam_cols('burgundy')))
     } else if (set_minimal_graphics_theme) {
