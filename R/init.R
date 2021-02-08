@@ -16,14 +16,14 @@
 #' @param should_beep Whether startr should beep after tasks like processing or knitting RMarkdown notebooks. (Default: TRUE)
 #' @param set_minimal_graphics_theme Whether the minimal graphics theme should be used. (Default: TRUE)
 #' @param packages Vector of package names, from CRAN, Github or Bioconductor to be installed.
-#'   If using GitHub, package names should be in the format 'globeandmail/upstartr'.
+#'   If using GitHub, package names should be in the format 'user/repo', e.g. 'globeandmail/upstartr'.
 #'
 #' @return No return value, called for side effects
 #'
 #' @export
 initialize_startr <- function(
-    author,
-    title,
+    author = 'Firstname Lastname <firstlast@example.com>',
+    title = 'startr',
     scipen = 999,
     timezone = 'America/Toronto',
     should_render_notebook = FALSE,
@@ -46,8 +46,8 @@ initialize_startr <- function(
       startr.should_beep = should_beep
     )
 
-    if (!missing('author')) options(startr.author = author)
-    if (!missing('title')) options(startr.title = title)
+    options(startr.author = author)
+    options(startr.title = title)
 
     if ('cansim' %in% packages) options(cansim.cache_path = dir_data_cache())
     if ('cancensus' %in% packages) {
@@ -91,6 +91,5 @@ initialize_startr <- function(
       root.dir = here::here()
     )
 
-    cat('\033[0;32m✓ Your startr project has been initialized!\033[0m\n')
-
+    cat(crayon::green(glue::glue('{bquote("\u2713")} Your startr project \'{crayon::bold(title)}\' has been initialized!\n')))
 }

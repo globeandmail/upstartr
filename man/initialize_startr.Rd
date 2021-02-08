@@ -5,8 +5,8 @@
 \title{Initialize startr project}
 \usage{
 initialize_startr(
-  author,
-  title,
+  author = "Firstname Lastname <firstlast@example.com>",
+  title = "startr",
   scipen = 999,
   timezone = "America/Toronto",
   should_render_notebook = FALSE,
@@ -41,7 +41,7 @@ from the environment after processing is complete. (Default: TRUE)}
 \item{set_minimal_graphics_theme}{Whether the minimal graphics theme should be used. (Default: TRUE)}
 
 \item{packages}{Vector of package names, from CRAN, Github or Bioconductor to be installed.
-If using GitHub, package names should be in the format 'globeandmail/upstartr'.}
+If using GitHub, package names should be in the format 'user/repo', e.g. 'globeandmail/upstartr'.}
 }
 \value{
 No return value, called for side effects

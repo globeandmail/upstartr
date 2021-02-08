@@ -29,7 +29,8 @@ Imports:
     rmarkdown,
     textclean,
     sf,
-    tgamtheme
+    tgamtheme,
+    crayon
 Suggests:
     testthat (>= 3.0.0)
 Language: en-US
