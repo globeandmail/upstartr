@@ -91,6 +91,6 @@ initialize_startr <- function(
       root.dir = here::here()
     )
 
-    print(glue::glue('Your startr project has been initialized!'))
+    cat('\033[0;32m✓ Your startr project has been initialized!\033[0m\n')
 
 }

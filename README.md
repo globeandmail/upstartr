@@ -9,7 +9,7 @@
   <img src="https://raw.githubusercontent.com/globeandmail/upstartr/master/images/upstartr-sticker.png" alt="upstartr logo" width="40%" height="40%" />
 </p>
 
-Upstartr is a companion package to The Globe and Mail's data journalism template, [**startr**](https://www.github.com/globeandmail/startr). It contains a series of functions meant to be consumed by the template project, plus additional helpful functions for day-to-day data journalism.
+Upstartr is a companion package to The Globe and Mail's data journalism template, [**startr**](https://github.com/globeandmail/startr). It contains a series of functions meant to be consumed by the template project, plus additional helpful functions for day-to-day data journalism.
 
 ### Installation
 
@@ -25,13 +25,11 @@ library(upstartr)
 
 ### Reference
 
-You can find the full reference manual for `upstartr`'s functions [**here**](https://globeandmail.github.io/upstartr).
-
+You can find the full reference manual for `upstartr`'s functions [**here**](https://globeandmail.github.io/upstartr/).
 
 ### Credits
 
 Spark plug illustration by Murat Yükselir.
-
 
 ### Get in touch
 
