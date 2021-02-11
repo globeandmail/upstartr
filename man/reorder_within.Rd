@@ -3,6 +3,11 @@
 \name{reorder_within}
 \alias{reorder_within}
 \title{Reorder an x or y axis within facets}
+\value{
+A ggplot2 object for reordering elements within facets, used in combination with
+  \code{upstartr::\link[upstartr:scale_x_reordered]{scale_x_reordered}} or
+  \code{upstartr::\link[upstartr:scale_y_reordered]{scale_y_reordered}}
+}
 \description{
 See \code{tidytext::\link[tidytext:reorder_within]{reorder_within}} for details.
 }

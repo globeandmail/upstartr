@@ -6,6 +6,9 @@
 #' @keywords internal
 #' @export
 #' @importFrom tidytext reorder_within
+#' @return A ggplot2 object for reordering elements within facets, used in combination with
+#'   \code{upstartr::\link[upstartr:scale_x_reordered]{scale_x_reordered}} or
+#'   \code{upstartr::\link[upstartr:scale_y_reordered]{scale_y_reordered}}
 NULL
 
 #' Passed after reorder_within to reorder x-axis along facets
@@ -16,6 +19,8 @@ NULL
 #' @keywords internal
 #' @export
 #' @importFrom tidytext scale_x_reordered
+#' @return A scale object to be consumed by ggplot2, used in combination with
+#'   \code{upstartr::\link[upstartr:reorder_within]{reorder_within}}.
 NULL
 
 #' Passed after reorder_within to reorder x-axis along facets
@@ -26,6 +31,8 @@ NULL
 #' @keywords internal
 #' @export
 #' @importFrom tidytext scale_y_reordered
+#' @return A scale object to be consumed by ggplot2, used in combination with
+#'   \code{upstartr::\link[upstartr:reorder_within]{reorder_within}}.
 NULL
 
 #' Create a continuous x-axis scale using percentages

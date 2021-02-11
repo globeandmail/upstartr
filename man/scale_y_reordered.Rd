@@ -3,6 +3,10 @@
 \name{scale_y_reordered}
 \alias{scale_y_reordered}
 \title{Passed after reorder_within to reorder x-axis along facets}
+\value{
+A scale object to be consumed by ggplot2, used in combination with
+  \code{upstartr::\link[upstartr:reorder_within]{reorder_within}}.
+}
 \description{
 See \code{tidytext::\link[tidytext:scale_y_reordered]{scale_y_reordered}} for details.
 }

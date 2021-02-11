@@ -2,7 +2,18 @@ Package: upstartr
 Type: Package
 Title: Utilities Powering the Globe and Mail's Data Journalism Template
 Version: 0.1.0
-Authors@R: c(person("Tom", "Cardoso", email = "tcardoso@globeandmail.com", role = c("aut", "cre"), comment = "creator and maintainer"))
+Authors@R:
+    c(person(given = "Tom",
+             family = "Cardoso",
+             email = "tcardoso@globeandmail.com",
+             role = c("aut", "cre"),
+             comment = "creator and maintainer"),
+      person(given = "Michael",
+             family = "Pereira",
+             email = "hello@monkeycycle.org",
+             role = c("ctb")),
+      person(given = "The Globe and Mail Inc.",
+             role = c("cph")))
 Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
 Description: Core functions necessary for using The Globe and Mail's R data journalism template, 'startr', along with utilities for day-to-day data journalism tasks, such as reading and writing files, producing graphics and cleaning up datasets.
 License: MIT + file LICENSE
