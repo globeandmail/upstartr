@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -43,16 +45,12 @@
 
 
 
-<meta property="og:title" content="Changelog" />
 
+<meta property="og:title" content="Changelog" />
 <meta property="og:image" content="https://globeandmail.github.io/upstartr/logo.png" />
 <meta property="og:image:alt" content="upstartr" />
-
-
 <meta name="twitter:card" content="summary_large_image" />
-
 <meta name="twitter:creator" content="@tom_cardoso" />
-
 <meta name="twitter:site" content="https://globeandmail.github.io/upstartr/" />
 
 
@@ -85,7 +83,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">upstartr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -104,7 +102,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/globeandmail/upstartr/">
@@ -129,9 +126,20 @@
       <small>Source: <a href='https://github.com/globeandmail/upstartr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="version-0-1-0" class="section level1">
+    <div id="version-011" class="section level1">
+<h1 class="page-header" data-toc-text="0.1.1">
+<a href="#version-011" class="anchor"></a>Version 0.1.1<small> Unreleased </small>
+</h1>
+<p>Small bug fixes:</p>
+<ul>
+<li>Adds an extra newline to the <code><a href="../reference/initialize_startr.html">initialize_startr()</a></code> log messages so that it stays on its own line.</li>
+<li>Fixes an issue with <code><a href="../reference/write_plot.html">write_plot()</a></code> where the <code>format</code> parameter was inadvertently being passed to <code>ggsave()</code>, which would then throw an error.</li>
+</ul>
+</div>
+    <div id="version-010" class="section level1">
 <h1 class="page-header" data-toc-text="0.1.0">
-<a href="#version-0-1-0" class="anchor"></a>Version 0.1.0</h1>
+<a href="#version-010" class="anchor"></a>Version 0.1.0<small> 2021-02-15 </small>
+</h1>
 <p>Inaugural release! 🎉</p>
 </div>
   </div>

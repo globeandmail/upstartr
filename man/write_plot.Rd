@@ -4,10 +4,13 @@
 \alias{write_plot}
 \title{Write out a ggplot2 graphic with minimal configuration}
 \usage{
-write_plot(variable, output_dir = dir_plots(), ...)
+write_plot(variable, format = "png", output_dir = dir_plots(), ...)
 }
 \arguments{
 \item{variable}{A tibble or dataframe object.}
+
+\item{format}{The desired format for the plot, be it 'png', 'pdf', etc. Accepts formats
+you'd pass to \code{ggplot2::\link[ggplot2:ggsave]{ggsave}}'s 'device' parameter.}
 
 \item{output_dir}{The directory to save the plot out to.}
 

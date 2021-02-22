@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -43,21 +45,16 @@
 
 
 
-<meta property="og:title" content="Simplifies strings for analysis — simplify_string" />
 
+<meta property="og:title" content="Simplifies strings for analysis — simplify_string" />
 <meta property="og:description" content="Takes a character vector and &quot;simplifies&quot; it by uppercasing, removing most non-alphabetic
 (or alphanumeric) characters, removing accents, forcing UTF-8 encoding, removing excess spaces,
 and optionally removing stop words. Useful in cases where you have two large vector of person
 or business names you need to compare, but where misspellings may be common." />
-
 <meta property="og:image" content="https://globeandmail.github.io/upstartr/logo.png" />
 <meta property="og:image:alt" content="upstartr" />
-
-
 <meta name="twitter:card" content="summary_large_image" />
-
 <meta name="twitter:creator" content="@tom_cardoso" />
-
 <meta name="twitter:site" content="https://globeandmail.github.io/upstartr/" />
 
 
@@ -90,7 +87,7 @@ or business names you need to compare, but where misspellings may be common." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">upstartr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -109,7 +106,6 @@ or business names you need to compare, but where misspellings may be common." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/globeandmail/upstartr/">
@@ -136,12 +132,10 @@ or business names you need to compare, but where misspellings may be common." />
     </div>
 
     <div class="ref-description">
-    
     <p>Takes a character vector and "simplifies" it by uppercasing, removing most non-alphabetic
 (or alphanumeric) characters, removing accents, forcing UTF-8 encoding, removing excess spaces,
 and optionally removing stop words. Useful in cases where you have two large vector of person
 or business names you need to compare, but where misspellings may be common.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>simplify_string</span><span class='op'>(</span>
@@ -154,7 +148,7 @@ or business names you need to compare, but where misspellings may be common.</p>
   trim <span class='op'>=</span> <span class='cn'>TRUE</span>,
   stopwords <span class='op'>=</span> <span class='cn'>NA</span>
 <span class='op'>)</span></pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -192,11 +186,10 @@ or 'keep' for the existing casing (Default: 'upper')</p></td>
       <td><p>An optional vector of stop words to be removed.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A character vector of simplified strings.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>simplify_string</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'J. Jonah Jameson'</span>, <span class='st'>'j jonah jameson'</span>,

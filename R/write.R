@@ -33,24 +33,22 @@ write_excel <- function(variable, output_dir = dir_data_out(), should_timestamp_
 #' variable name as the filename.
 #'
 #' @param variable A tibble or dataframe object.
+#' @param format The desired format for the plot, be it 'png', 'pdf', etc. Accepts formats
+#'   you'd pass to \code{ggplot2::\link[ggplot2:ggsave]{ggsave}}'s 'device' parameter.
 #' @param output_dir The directory to save the plot out to.
 #' @param ... Other settings to pass to ggsave, such as format, width, height or dpi.
 #'
 #' @return No return value, called for side effects
 #'
 #' @export
-write_plot <- function(variable, output_dir = dir_plots(), ...) {
+write_plot <- function(variable, format = 'png', output_dir = dir_plots(), ...) {
   filename <- deparse(substitute(variable))
 
   args <- list(plot = variable, ...)
 
-  if (is.null(args[['format']])) {
-    args[['format']] <- 'png'
-  }
+  args[['file']] <- here::here(output_dir, glue::glue("{filename}.{format}"))
 
-  args[['file']] <- here::here(output_dir, glue::glue("{filename}.{args[['format']]}"))
-
-  if (args[['format']] == 'pdf') args[['useDingbats']] <- FALSE
+  if ('format' == 'pdf') args[['useDingbats']] <- FALSE
 
   do.call(ggplot2::ggsave, args)
 }
