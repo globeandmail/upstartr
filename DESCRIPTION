@@ -1,7 +1,7 @@
 Package: upstartr
 Type: Package
 Title: Utilities Powering the Globe and Mail's Data Journalism Template
-Version: 0.1.0
+Version: 0.1.1
 Authors@R:
     c(person(given = "Tom",
              family = "Cardoso",

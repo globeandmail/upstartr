@@ -91,5 +91,5 @@ initialize_startr <- function(
       root.dir = here::here()
     )
 
-    cat(crayon::green(glue::glue('{bquote("\u2713")} Your startr project \'{crayon::bold(title)}\' has been initialized!\n')))
+    cat(crayon::green(glue::glue('{bquote("\u2713")} Your startr project {crayon::bold(title)} has been initialized!\n\n')))
 }
