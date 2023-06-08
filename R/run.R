@@ -122,6 +122,17 @@ run_visualize <- function() {
   source(dir_src('visualize.R'))
 }
 
+#' Runs the modelling step for a startr project.
+#'
+#' Sources \code{model.R}.
+#'
+#' @return No return value, called for side effects
+#'
+#' @export
+run_model <- function() {
+  source(dir_src('model.R'))
+}
+
 #' Runs the notebook rendering step for a startr project.
 #'
 #' Renders an RMarkdown notebook using \code{upstartr::\link[upstartr:render_notebook]{render_notebook}}
