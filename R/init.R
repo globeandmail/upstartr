@@ -55,7 +55,7 @@ initialize_startr <- function(
         # CANCENSUS_API should be set in your home directory's
         # .Renviron file, and will get pulled down from there
         cancensus.api_key = Sys.getenv(c('CANCENSUS_API')),
-        cancensus.cache_path = dir_data_cache(),
+        cancensus.cache_path = dir_data_cache()
       )
     }
 

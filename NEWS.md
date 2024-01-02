@@ -1,3 +1,9 @@
+Version 0.1.2
+====================
+
+Small bug fix:
+- Fixes an error where `initialize_startr()` breaks if `cancensus` is among listed packages due to an errant comma.
+
 Version 0.1.1
 ====================
 
