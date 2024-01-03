@@ -37,4 +37,4 @@ If you've got any questions, feel free to send us an email, or give us a shout o
 
 [![Tom Cardoso](https://avatars0.githubusercontent.com/u/2408118?v=3&s=65)](https://github.com/tomcardoso)
 ---
-[Tom Cardoso](mailto:tcardoso@globeandmail.com) <br> [@tom_cardoso](https://www.twitter.com/tom_cardoso)
+[Tom Cardoso](mailto:tcardoso@globeandmail.com) <br> [@tom_cardoso](https://twitter.com/tom_cardoso)
