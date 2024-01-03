@@ -30,6 +30,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -42,18 +44,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">upstartr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -63,7 +59,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/globeandmail/upstartr/">
+  <a href="https://github.com/globeandmail/upstartr/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -80,88 +76,95 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="upstartr" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#upstartr" class="anchor"></a>upstartr</h1></div>
-<!-- badges: start -->
-<a href="https://github.com/globeandmail/upstartr/actions"><img src="https://github.com/globeandmail/upstartr/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://cran.r-project.org/package=upstartr"><img src="http://www.r-pkg.org/badges/version/upstartr" alt="CRAN_Status_Badge"></a> <a href="https://cranlogs.r-pkg.org/badges/upstartr"><img src="https://cranlogs.r-pkg.org/badges/upstartr" alt="CRAN_Downloads_Badge"></a> <!-- badges: end -->
-<p align="center">
-<img src="https://raw.githubusercontent.com/globeandmail/upstartr/master/images/upstartr-sticker.png" alt="upstartr logo" width="40%" height="40%"></p>
-<p>Upstartr is a companion package to The Globe and Mail’s data journalism template, <a href="https://github.com/globeandmail/startr"><strong>startr</strong></a>. It contains a series of functions meant to be consumed by the template project, plus additional helpful functions for day-to-day data journalism.</p>
-<div id="installation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h3>
+<div class="section level1">
+<div class="page-header"><h1 id="upstartr">upstartr<a class="anchor" aria-label="anchor" href="#upstartr"></a>
+</h1></div>
+<!-- badges: start --><a href="https://github.com/globeandmail/upstartr/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/globeandmail/upstartr/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://cran.r-project.org/package=upstartr" class="external-link"><img src="http://www.r-pkg.org/badges/version/upstartr" alt="CRAN_Status_Badge"></a> <a href="https://cranlogs.r-pkg.org/badges/upstartr" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/upstartr" alt="CRAN_Downloads_Badge"></a> <!-- badges: end --><p align="center"><img src="https://raw.githubusercontent.com/globeandmail/upstartr/master/images/upstartr-sticker.png" alt="upstartr logo" width="40%" height="40%"></p>
+<p>Upstartr is a companion package to The Globe and Mail’s data journalism template, <a href="https://github.com/globeandmail/startr" class="external-link"><strong>startr</strong></a>. It contains a series of functions meant to be consumed by the template project, plus additional helpful functions for day-to-day data journalism.</p>
+<div class="section level3">
+<h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h3>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'upstartr'</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'upstartr'</span><span class="op">)</span></span></code></pre></div>
 <p>Or, if you want to run a development version, you can install it from GitHub by doing:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">'globeandmail/upstartr'</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/globeandmail/upstartr">upstartr</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'globeandmail/upstartr'</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/globeandmail/upstartr" class="external-link">upstartr</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="reference" class="section level3">
-<h3 class="hasAnchor">
-<a href="#reference" class="anchor"></a>Reference</h3>
-<p>You can find the full reference manual for <code>upstartr</code>’s functions <a href="https://globeandmail.github.io/upstartr/"><strong>here</strong></a>.</p>
+<div class="section level3">
+<h3 id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
+</h3>
+<p>You can find the full reference manual for <code>upstartr</code>’s functions <a href="https://globeandmail.github.io/upstartr/" class="external-link"><strong>here</strong></a>.</p>
 </div>
-<div id="credits" class="section level3">
-<h3 class="hasAnchor">
-<a href="#credits" class="anchor"></a>Credits</h3>
+<div class="section level3">
+<h3 id="credits">Credits<a class="anchor" aria-label="anchor" href="#credits"></a>
+</h3>
 <p>Spark plug illustration by Murat Yükselir.</p>
 </div>
-<div id="get-in-touch" class="section level3">
-<h3 class="hasAnchor">
-<a href="#get-in-touch" class="anchor"></a>Get in touch</h3>
+<div class="section level3">
+<h3 id="get-in-touch">Get in touch<a class="anchor" aria-label="anchor" href="#get-in-touch"></a>
+</h3>
 <p>If you’ve got any questions, feel free to send us an email, or give us a shout on Twitter:</p>
 </div>
-<div id="tom-cardoso" class="section level2">
-<h2 class="hasAnchor">
-<a href="#tom-cardoso" class="anchor"></a><a href="https://github.com/tomcardoso"><img src="https://avatars0.githubusercontent.com/u/2408118?v=3&amp;s=65" alt="Tom Cardoso"></a>
+<div class="section level2">
+<h2 id="tom-cardoso">
+<a href="https://github.com/tomcardoso" class="external-link"><img src="https://avatars0.githubusercontent.com/u/2408118?v=3&amp;s=65" alt="Tom Cardoso"></a><a class="anchor" aria-label="anchor" href="#tom-cardoso"></a>
 </h2>
-<p><a href="mailto:tcardoso@globeandmail.com">Tom Cardoso</a> <br><a href="https://www.twitter.com/tom_cardoso">@tom_cardoso</a></p>
+<p><a href="mailto:tcardoso@globeandmail.com">Tom Cardoso</a> <br><a href="https://www.twitter.com/tom_cardoso" class="external-link">@tom_cardoso</a></p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=upstartr">https://​cloud.r-project.org/​package=upstartr</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/globeandmail/upstartr/">https://​github.com/​globeandmail/​upstartr/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/globeandmail/upstartr/issues">https://​github.com/​globeandmail/​upstartr/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=upstartr" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/globeandmail/upstartr/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/globeandmail/upstartr/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
+<a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
 </li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing upstartr</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://www.theglobeandmail.com/authors/tom-cardoso">Tom Cardoso</a> <br><small class="roles"> Author, maintainer </small>  <br><small>(creator and maintainer)</small>
-</li>
-<li><a href="authors.html">All authors...</a></li>
+<a href="https://www.theglobeandmail.com/authors/tom-cardoso" class="external-link">Tom Cardoso</a> <br><small class="roles"> Author, maintainer </small>  </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://www.theglobeandmail.com/authors/tom-cardoso">Tom Cardoso</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://www.theglobeandmail.com/authors/tom-cardoso" class="external-link">Tom Cardoso</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -169,6 +172,8 @@
 
   
 
+
+  
 
   </body>
 </html>

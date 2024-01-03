@@ -7,4 +7,5 @@ images/*
 ^docs$
 ^pkgdown$
 ^cran-comments\.md$
+^testing\.md$
 ^CRAN-RELEASE$
