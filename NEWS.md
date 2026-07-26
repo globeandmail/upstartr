@@ -1,3 +1,15 @@
+Version 0.2.1
+====================
+
+- Moves `sf`, `tgamtheme` and `beepr` from `Imports` to `Suggests` (closes #8). These are
+  heavy or interactive-only dependencies (`sf` needs system GDAL/GEOS/PROJ libraries;
+  `tgamtheme` is only used if listed in `initialize_startr(packages = ...)`; `beepr` plays
+  audio, which is meaningless in CI or a headless/agent environment). Installing `upstartr`
+  no longer requires any of them. Functions that need them (`write_shp()`, the `tgamtheme`
+  branch of `initialize_startr()`, and beep notifications) now check for the package first
+  and fail with a clear message (or, for beeps, just silently skip) instead of hard-requiring
+  it at install time.
+
 Version 0.2.0
 ====================
 
