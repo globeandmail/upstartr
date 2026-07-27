@@ -33,6 +33,19 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v2
 
+      # System libraries needed to build sf (GDAL/GEOS/PROJ) and a few other compiled
+      # dependencies from source on Linux - not covered by the R package cache below,
+      # since apt packages live outside R_LIBS_USER. Regenerate this list with
+      # `pak::pkg_sysreqs(".", sysreqs_platform = "ubuntu-22.04", dependencies = TRUE)`
+      # if dependencies change substantially. Pandoc is excluded since setup-pandoc
+      # above already handles it.
+      - name: Cache apt packages
+        if: runner.os == 'Linux'
+        uses: awalsh128/cache-apt-pkgs-action@v1.6.3
+        with:
+          packages: git make libicu-dev libx11-dev cmake libuv1-dev libabsl-dev libssl-dev libgdal-dev gdal-bin libgeos-dev libproj-dev libsqlite3-dev libudunits2-dev
+          version: 1.0
+
       - uses: r-lib/actions/setup-r@v2
         with:
           r-version: ${{ matrix.config.r }}
