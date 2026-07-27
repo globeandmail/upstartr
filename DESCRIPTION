@@ -18,7 +18,6 @@ Maintainer: Tom Cardoso <tcardoso@globeandmail.com>
 Description: Core functions necessary for using The Globe and Mail's R data journalism template, 'startr', along with utilities for day-to-day data journalism tasks, such as reading and writing files, producing graphics and cleaning up datasets.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Depends:
     R (>= 3.6.3)
 Imports:
