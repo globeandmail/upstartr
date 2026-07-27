@@ -48,7 +48,7 @@ write_plot <- function(variable, format = 'png', output_dir = dir_plots(), ...) 
 
   args[['file']] <- here::here(output_dir, glue::glue("{filename}.{format}"))
 
-  if ('format' == 'pdf') args[['useDingbats']] <- FALSE
+  if (format == 'pdf') args[['useDingbats']] <- FALSE
 
   do.call(ggplot2::ggsave, args)
 }
@@ -67,6 +67,10 @@ write_plot <- function(variable, format = 'png', output_dir = dir_plots(), ...) 
 #'
 #' @export
 write_shp <- function(shp, path, ...) {
+  if (!requireNamespace('sf', quietly = TRUE)) {
+    stop("Package 'sf' is required for write_shp(). Install it with install.packages('sf').")
+  }
+
   if (file.exists(path)) {
     file.remove(path)
   }

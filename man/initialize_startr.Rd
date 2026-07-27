@@ -15,7 +15,8 @@ initialize_startr(
   should_clean_processing_variables = TRUE,
   should_beep = TRUE,
   set_minimal_graphics_theme = TRUE,
-  packages = c()
+  packages = c(),
+  repos = "https://packagemanager.posit.co/cran/latest"
 )
 }
 \arguments{
@@ -42,6 +43,13 @@ from the environment after processing is complete. (Default: TRUE)}
 
 \item{packages}{Vector of package names, from CRAN, Github or Bioconductor to be installed.
 If using GitHub, package names should be in the format 'user/repo', e.g. 'globeandmail/upstartr'.}
+
+\item{repos}{The CRAN mirror used to install `packages`. Defaults to Posit Package Manager's
+rolling binary snapshot, which serves pre-built binaries for a much wider range of platforms
+(including Linux) and R versions than CRAN's own mirrors do - this avoids slow, sometimes
+multi-hour source compiles for heavy packages like `arrow` or `sf` when no matching binary
+is available on CRAN. Set to `NULL` to leave your existing `repos` option untouched, e.g. if
+your organization already runs its own mirror. (Default: 'https://packagemanager.posit.co/cran/latest')}
 }
 \value{
 No return value, called for side effects
