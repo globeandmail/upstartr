@@ -48,7 +48,7 @@ write_plot <- function(variable, format = 'png', output_dir = dir_plots(), ...) 
 
   args[['file']] <- here::here(output_dir, glue::glue("{filename}.{format}"))
 
-  if ('format' == 'pdf') args[['useDingbats']] <- FALSE
+  if (format == 'pdf') args[['useDingbats']] <- FALSE
 
   do.call(ggplot2::ggsave, args)
 }

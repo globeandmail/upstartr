@@ -1,3 +1,12 @@
+Version 0.1.3
+====================
+
+Small bug fix:
+- Fixes `write_plot()` so `useDingbats = FALSE` is actually applied for PDF output (closes #3). The
+  previous code compared the literal string `'format'` against `'pdf'` instead of checking the
+  `format` argument, so the fix never took effect.
+- Adds test coverage for `write_plot()` and `write_excel()`.
+
 Version 0.1.2
 ====================
 
