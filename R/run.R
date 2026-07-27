@@ -1,3 +1,18 @@
+#' Beep if the beepr package is installed
+#'
+#' beepr is an optional dependency (see \code{Suggests} in DESCRIPTION), since audio
+#' notifications don't make sense in headless environments like CI or a coding agent's
+#' sandbox. Silently does nothing if beepr isn't installed.
+#'
+#' @return No return value, called for side effects
+#'
+#' @noRd
+maybe_beep <- function() {
+  if (requireNamespace('beepr', quietly = TRUE)) {
+    beepr::beep()
+  }
+}
+
 #' Configures an existing startr project
 #'
 #' Sources \code{config.R} and \code{functions.R} in turn.
@@ -97,7 +112,7 @@ end_processing <- function(should_clean_processing_variables = TRUE, should_beep
 
     rm(list = processing_specific_vars, envir = .GlobalEnv)
   }
-  if (should_beep) beepr::beep()
+  if (should_beep) maybe_beep()
 }
 
 #' Runs the analysis step for a startr project.
@@ -147,7 +162,7 @@ run_notebook <- function(filename = 'notebook.Rmd', should_beep = TRUE, should_r
   }
 
   if (should_render_notebook) render_notebook(dir_reports(filename))
-  if (should_beep) beepr::beep()
+  if (should_beep) maybe_beep()
 }
 
 #' Renders out an RMarkdown notebook.

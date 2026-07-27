@@ -67,6 +67,10 @@ write_plot <- function(variable, format = 'png', output_dir = dir_plots(), ...) 
 #'
 #' @export
 write_shp <- function(shp, path, ...) {
+  if (!requireNamespace('sf', quietly = TRUE)) {
+    stop("Package 'sf' is required for write_shp(). Install it with install.packages('sf').")
+  }
+
   if (file.exists(path)) {
     file.remove(path)
   }

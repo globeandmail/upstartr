@@ -77,3 +77,15 @@ test_that('write_excel timestamps filenames when requested', {
 
   expect_match(captured_path, 'my_special_table_[0-9]{14}\\.xlsx$')
 })
+
+test_that('write_shp removes an existing file before writing', {
+  skip_if_not_installed('sf')
+
+  path <- withr::local_tempfile(fileext = '.shp')
+  pt <- sf::st_sf(id = 1, geometry = sf::st_sfc(sf::st_point(c(0, 0))))
+  sf::st_write(pt, path, quiet = TRUE)
+  expect_true(file.exists(path))
+
+  # write_shp should overwrite rather than error on an existing file
+  expect_no_error(write_shp(pt, path, quiet = TRUE))
+})

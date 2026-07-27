@@ -70,6 +70,9 @@ initialize_startr <- function(
     librarian::shelf(packages, lib = NULL)
 
     if ('tgamtheme' %in% packages) {
+      if (!requireNamespace('tgamtheme', quietly = TRUE)) {
+        stop("Package 'tgamtheme' is required when 'tgamtheme' is listed in `packages`. Install it with install.packages('tgamtheme').")
+      }
       ggplot2::theme_set(tgamtheme::theme_tgam())
       ggplot2::update_geom_defaults('line', list(size = 1, lineend = 'round', colour = tgamtheme::tgam_cols('burgundy')))
       ggplot2::update_geom_defaults('path', list(size = 1, lineend = 'round', colour = tgamtheme::tgam_cols('burgundy')))
