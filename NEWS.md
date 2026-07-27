@@ -1,3 +1,14 @@
+Version 0.2.0
+====================
+
+- `initialize_startr()` now defaults `options(repos)` to Posit Package Manager's rolling binary
+  snapshot instead of leaving it at CRAN's default. CRAN doesn't always have a binary available
+  for every platform/R-version combination for heavy compiled packages (`arrow`, `sf`, etc.),
+  which silently falls back to a source compile that can take many minutes, or fail outright on
+  a machine without build tools. Set `initialize_startr(repos = NULL)` to leave your existing
+  `repos` option untouched (e.g. if your organization already runs its own mirror), or pass a
+  different URL to use a different one.
+
 Version 0.1.3
 ====================
 
