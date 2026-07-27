@@ -14,7 +14,7 @@ sandbox networking artifact (no NTP access) and does not appear on any of the Gi
 test environments above, which all pass with 0 errors, 0 warnings, 0 notes.
 
 ## Change notes
-This release bundles three sets of changes since the last CRAN release (0.1.2):
+This release (0.2.0) bundles three sets of changes since the last CRAN release (0.1.2):
 
 - Fixes `write_plot()` so `useDingbats = FALSE` is actually applied for PDF output. The
   previous code compared the literal string `'format'` against `'pdf'` instead of checking
@@ -30,4 +30,4 @@ This release bundles three sets of changes since the last CRAN release (0.1.2):
   and fail with a clear message (or silently skip, for beeps) instead of hard-requiring
   installation.
 
-See NEWS.md for full details (versions 0.1.3, 0.2.0, 0.2.1).
+See NEWS.md for full details.

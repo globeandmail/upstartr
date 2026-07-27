@@ -9,3 +9,4 @@ images/*
 ^cran-comments\.md$
 ^testing\.md$
 ^CRAN-RELEASE$
+^CLAUDE\.md$
